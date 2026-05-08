@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "VoIP CRM",
+    "slug": "voipcrm",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "voipcrm",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": false,
+    "android": {
+      "package": "com.voipcrm.app",
+      "permissions": [
+        "RECORD_AUDIO",
+        "MODIFY_AUDIO_SETTINGS",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ]
+    },
+    "plugins": ["expo-router"],
+    "extra": {
+      "apiUrl": "http://10.0.2.2:4000"
+    }
+  }
+}

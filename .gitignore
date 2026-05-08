@@ -5,3 +5,24 @@ out/
 .env.local
 *.log
 .remotion/
+
+# build outputs
+dist/
+build/
+.next/
+.expo/
+.expo-shared/
+
+# editor
+.vscode/
+.idea/
+
+# os
+Thumbs.db
+
+# prisma
+server/prisma/migrations/dev.db*
+
+# expo
+mobile/web-build/
+mobile/.expo/

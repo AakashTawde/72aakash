@@ -1,0 +1,17 @@
+{
+  "name": "72aakash-voip-crm",
+  "version": "0.1.0",
+  "private": true,
+  "description": "VoIP CRM calling system: web + Android, calling, recording, leads, reminders",
+  "workspaces": [
+    "shared",
+    "server",
+    "web",
+    "mobile"
+  ],
+  "scripts": {
+    "dev:server": "npm --workspace server run dev",
+    "dev:web": "npm --workspace web run dev",
+    "dev:mobile": "npm --workspace mobile run start"
+  }
+}
