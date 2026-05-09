@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumière — Premium Laser Hair Removal</title>
+    <meta
+      name="description"
+      content="Smooth, confident skin in fewer sessions. FDA-cleared diode laser technology, expertly delivered."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Fraunces"', "serif"],
+              sans: ['"Inter"', "system-ui", "sans-serif"],
+            },
+            colors: {
+              ink: "#0E0B0A",
+              cream: "#F7F1EA",
+              rose: "#E8C4B8",
+              glow: "#F0A89B",
+              wine: "#5A1F2A",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="bg-cream text-ink font-sans antialiased overflow-x-hidden">
+    <!-- ============== NAV ============== -->
+    <nav
+      id="nav"
+      class="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between transition-all duration-500"
+    >
+      <a href="#" class="font-serif text-2xl tracking-tight" data-fade>
+        Lumi<span class="italic text-wine">è</span>re
+      </a>
+      <ul
+        class="hidden md:flex items-center gap-10 text-sm tracking-wide"
+        data-fade
+      >
+        <li><a href="#science" class="hover:text-wine transition">Science</a></li>
+        <li><a href="#process" class="hover:text-wine transition">Process</a></li>
+        <li><a href="#pricing" class="hover:text-wine transition">Pricing</a></li>
+        <li><a href="#faq" class="hover:text-wine transition">FAQ</a></li>
+      </ul>
+      <a
+        href="#book"
+        data-fade
+        class="hidden md:inline-flex items-center gap-2 bg-ink text-cream px-5 py-2.5 rounded-full text-sm hover:bg-wine transition-colors"
+      >
+        Book consultation
+        <span aria-hidden="true">→</span>
+      </a>
+    </nav>
+
+    <!-- ============== HERO ============== -->
+    <header class="relative min-h-screen flex items-center px-6 md:px-12 pt-24">
+      <!-- animated laser glow -->
+      <div class="laser-glow" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+
+      <div class="relative z-10 max-w-6xl mx-auto w-full grid md:grid-cols-12 gap-10 items-center">
+        <div class="md:col-span-7">
+          <p
+            data-reveal
+            class="uppercase tracking-[0.3em] text-xs text-wine mb-6"
+          >
+            FDA-cleared · Diode 808nm · Pain-managed
+          </p>
+
+          <h1
+            class="font-serif font-light leading-[0.95] text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-tight"
+          >
+            <span data-reveal-line><span>Smooth skin,</span></span>
+            <span data-reveal-line><span class="italic text-wine">written</span></span>
+            <span data-reveal-line><span>in light.</span></span>
+          </h1>
+
+          <p
+            data-reveal
+            class="mt-8 text-lg md:text-xl max-w-xl text-ink/70 leading-relaxed"
+          >
+            A precision diode laser, a chilled sapphire tip, and a clinician who
+            actually listens. Up to 90% reduction in unwanted hair — in as few
+            as six sessions.
+          </p>
+
+          <div data-reveal class="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href="#book"
+              class="group inline-flex items-center gap-3 bg-ink text-cream px-7 py-4 rounded-full text-sm tracking-wide hover:bg-wine transition-colors"
+            >
+              Book a free consultation
+              <span class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+            <a
+              href="#science"
+              class="inline-flex items-center gap-3 px-2 py-4 text-sm tracking-wide border-b border-ink/30 hover:border-ink transition-colors"
+            >
+              How it works
+            </a>
+          </div>
+
+          <div data-reveal class="mt-12 flex items-center gap-8 text-xs tracking-widest uppercase text-ink/50">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              12,400+ sessions delivered
+            </div>
+            <div class="hidden sm:block">★ 4.9 / 5 · Google Reviews</div>
+          </div>
+        </div>
+
+        <!-- floating treatment card -->
+        <div class="md:col-span-5 relative">
+          <div data-float class="hero-card">
+            <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden bg-gradient-to-br from-rose via-glow to-wine">
+              <div class="scan-line" aria-hidden="true"></div>
+              <div class="absolute inset-0 mix-blend-soft-light opacity-60 pattern-dots"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-cream">
+                <div class="flex items-center justify-between mb-2 text-xs tracking-widest opacity-80">
+                  <span>SESSION 04 / 06</span>
+                  <span>● LIVE</span>
+                </div>
+                <p class="font-serif text-2xl leading-tight">Underarms</p>
+                <p class="text-sm opacity-80">14 min · Pain level 2/10</p>
+                <div class="mt-4 h-1 bg-cream/20 rounded-full overflow-hidden">
+                  <div class="h-full bg-cream rounded-full progress-bar"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- floating chip 1 -->
+            <div data-float-chip class="floating-chip floating-chip-1">
+              <div class="text-[10px] tracking-widest text-ink/50">REDUCTION</div>
+              <div class="font-serif text-2xl">88<span class="text-base">%</span></div>
+            </div>
+            <!-- floating chip 2 -->
+            <div data-float-chip class="floating-chip floating-chip-2">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs">Cooling at 4°C</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- scroll cue -->
+      <div
+        data-reveal
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 text-xs uppercase tracking-[0.3em] text-ink/40 flex flex-col items-center gap-2"
+      >
+        Scroll
+        <span class="scroll-line"></span>
+      </div>
+    </header>
+
+    <!-- ============== MARQUEE ============== -->
+    <section class="border-y border-ink/10 py-6 overflow-hidden bg-cream">
+      <div class="marquee flex gap-16 whitespace-nowrap font-serif text-2xl text-ink/40">
+        <span>Underarms</span><span>•</span>
+        <span>Legs</span><span>•</span>
+        <span>Brazilian</span><span>•</span>
+        <span>Upper Lip</span><span>•</span>
+        <span>Bikini</span><span>•</span>
+        <span>Back</span><span>•</span>
+        <span>Chest</span><span>•</span>
+        <span>Arms</span><span>•</span>
+        <span>Face</span><span>•</span>
+        <!-- duplicate for seamless loop -->
+        <span>Underarms</span><span>•</span>
+        <span>Legs</span><span>•</span>
+        <span>Brazilian</span><span>•</span>
+        <span>Upper Lip</span><span>•</span>
+        <span>Bikini</span><span>•</span>
+        <span>Back</span><span>•</span>
+        <span>Chest</span><span>•</span>
+        <span>Arms</span><span>•</span>
+        <span>Face</span><span>•</span>
+      </div>
+    </section>
+
+    <!-- ============== SCIENCE ============== -->
+    <section id="science" class="px-6 md:px-12 py-24 md:py-36">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-12 items-end mb-20">
+          <div class="md:col-span-7">
+            <p data-reveal class="uppercase tracking-[0.3em] text-xs text-wine mb-4">The science</p>
+            <h2
+              data-reveal
+              class="font-serif text-4xl md:text-6xl leading-[1.05] tracking-tight"
+            >
+              Selective photothermolysis,<br />
+              <span class="italic text-wine">tuned to you.</span>
+            </h2>
+          </div>
+          <p data-reveal class="md:col-span-5 text-ink/70 text-lg leading-relaxed">
+            Our 808nm diode targets melanin in the follicle, heating it to the
+            point of permanent disablement — without damaging the surrounding
+            skin. We adjust fluence, pulse and cooling to your tone and
+            sensitivity, every single session.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <article data-reveal class="science-card">
+            <div class="science-num">01</div>
+            <h3 class="font-serif text-2xl mb-3">Targeted</h3>
+            <p class="text-ink/70 text-sm leading-relaxed">
+              The 808nm wavelength penetrates 4–6mm — deep enough to reach the
+              follicle's bulb and bulge, where regrowth begins.
+            </p>
+          </article>
+          <article data-reveal class="science-card">
+            <div class="science-num">02</div>
+            <h3 class="font-serif text-2xl mb-3">Cooled</h3>
+            <p class="text-ink/70 text-sm leading-relaxed">
+              A sapphire tip chilled to 4°C glides over the skin, neutralising
+              heat at the surface — so all the energy goes where it should.
+            </p>
+          </article>
+          <article data-reveal class="science-card">
+            <div class="science-num">03</div>
+            <h3 class="font-serif text-2xl mb-3">Calibrated</h3>
+            <p class="text-ink/70 text-sm leading-relaxed">
+              Safe across Fitzpatrick I–VI. Each protocol is dialled to your
+              skin tone, hair density and area — never one-size-fits-all.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PROCESS / TIMELINE ============== -->
+    <section id="process" class="bg-ink text-cream px-6 md:px-12 py-24 md:py-36 relative overflow-hidden">
+      <div class="absolute inset-0 pattern-dots opacity-[0.04]" aria-hidden="true"></div>
+      <div class="max-w-6xl mx-auto relative">
+        <div class="mb-20">
+          <p data-reveal class="uppercase tracking-[0.3em] text-xs text-glow mb-4">The process</p>
+          <h2 data-reveal class="font-serif text-4xl md:text-6xl leading-[1.05]">
+            Six sessions.<br />
+            <span class="italic text-glow">A lifetime of smooth.</span>
+          </h2>
+        </div>
+
+        <ol class="relative grid gap-px bg-cream/10 md:grid-cols-4 rounded-3xl overflow-hidden">
+          <li data-reveal class="step">
+            <div class="step-num">01</div>
+            <h3 class="font-serif text-xl mb-2">Consult</h3>
+            <p class="text-cream/60 text-sm leading-relaxed">
+              Free 20-minute skin assessment, patch test and treatment plan.
+            </p>
+          </li>
+          <li data-reveal class="step">
+            <div class="step-num">02</div>
+            <h3 class="font-serif text-xl mb-2">Prep</h3>
+            <p class="text-cream/60 text-sm leading-relaxed">
+              Shave the area 24 hours before. We handle the rest — no waxing
+              needed.
+            </p>
+          </li>
+          <li data-reveal class="step">
+            <div class="step-num">03</div>
+            <h3 class="font-serif text-xl mb-2">Treat</h3>
+            <p class="text-cream/60 text-sm leading-relaxed">
+              15–45 minutes per area. Most clients describe a warm rubber band.
+            </p>
+          </li>
+          <li data-reveal class="step">
+            <div class="step-num">04</div>
+            <h3 class="font-serif text-xl mb-2">Glow</h3>
+            <p class="text-cream/60 text-sm leading-relaxed">
+              Visible shedding within 10 days. Return every 4–6 weeks.
+            </p>
+          </li>
+        </ol>
+
+        <div class="mt-16 grid md:grid-cols-3 gap-10" data-reveal>
+          <div>
+            <div class="font-serif text-5xl md:text-6xl text-glow" data-counter data-target="90">0</div>
+            <p class="mt-2 text-cream/70 text-sm">% average reduction after 6 sessions</p>
+          </div>
+          <div>
+            <div class="font-serif text-5xl md:text-6xl text-glow" data-counter data-target="15">0</div>
+            <p class="mt-2 text-cream/70 text-sm">minutes for underarms · pain level 2/10</p>
+          </div>
+          <div>
+            <div class="font-serif text-5xl md:text-6xl text-glow"><span data-counter data-target="12">0</span>k+</div>
+            <p class="mt-2 text-cream/70 text-sm">sessions delivered since 2019</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== TESTIMONIALS ============== -->
+    <section class="px-6 md:px-12 py-24 md:py-36">
+      <div class="max-w-6xl mx-auto">
+        <p data-reveal class="uppercase tracking-[0.3em] text-xs text-wine mb-4">Loved by 12,000+</p>
+        <h2 data-reveal class="font-serif text-4xl md:text-6xl leading-[1.05] mb-16 max-w-3xl">
+          What clients <span class="italic text-wine">whisper</span> after.
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <figure data-reveal class="testimonial">
+            <blockquote class="font-serif text-xl leading-snug">
+              "I stopped shaving two years ago and haven't thought about it
+              since. Worth every rupee."
+            </blockquote>
+            <figcaption class="mt-6 text-sm text-ink/60">
+              <strong class="text-ink">Priya M.</strong> · 8 sessions, full legs
+            </figcaption>
+          </figure>
+          <figure data-reveal class="testimonial bg-ink text-cream">
+            <blockquote class="font-serif text-xl leading-snug">
+              "The chilled tip is genuinely painless. I scrolled Instagram
+              through my underarm session."
+            </blockquote>
+            <figcaption class="mt-6 text-sm text-cream/60">
+              <strong class="text-cream">Aisha R.</strong> · 6 sessions, underarms
+            </figcaption>
+          </figure>
+          <figure data-reveal class="testimonial">
+            <blockquote class="font-serif text-xl leading-snug">
+              "I have darker skin and was nervous. They patch-tested, calibrated,
+              explained every step. Zero burns, zero issues."
+            </blockquote>
+            <figcaption class="mt-6 text-sm text-ink/60">
+              <strong class="text-ink">Karan S.</strong> · 10 sessions, back & chest
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PRICING ============== -->
+    <section id="pricing" class="px-6 md:px-12 py-24 md:py-36 bg-rose/30">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-10 items-end mb-16">
+          <div class="md:col-span-7">
+            <p data-reveal class="uppercase tracking-[0.3em] text-xs text-wine mb-4">Packages</p>
+            <h2 data-reveal class="font-serif text-4xl md:text-6xl leading-[1.05]">
+              No hidden fees.<br />
+              <span class="italic text-wine">No upsells.</span>
+            </h2>
+          </div>
+          <p data-reveal class="md:col-span-5 text-ink/70 leading-relaxed">
+            All packages include consultation, patch test, post-care and
+            unlimited touch-ups within 12 months.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <article data-reveal class="price-card">
+            <h3 class="font-serif text-2xl">Essentials</h3>
+            <p class="text-sm text-ink/60 mt-1">Underarms · Upper lip · Chin</p>
+            <div class="my-6 flex items-baseline gap-2">
+              <span class="font-serif text-5xl">₹14,900</span>
+              <span class="text-sm text-ink/50">/ 6 sessions</span>
+            </div>
+            <ul class="text-sm text-ink/70 space-y-2 mb-8">
+              <li>✓ Single small area</li>
+              <li>✓ Cooling included</li>
+              <li>✓ 12-month touch-ups</li>
+            </ul>
+            <a href="#book" class="btn-outline">Choose Essentials</a>
+          </article>
+
+          <article data-reveal class="price-card price-card-popular">
+            <div class="absolute -top-3 left-6 bg-wine text-cream text-[10px] tracking-widest uppercase px-3 py-1 rounded-full">
+              Most chosen
+            </div>
+            <h3 class="font-serif text-2xl">Signature</h3>
+            <p class="text-sm text-cream/70 mt-1">Underarms · Bikini · Half legs</p>
+            <div class="my-6 flex items-baseline gap-2">
+              <span class="font-serif text-5xl">₹39,900</span>
+              <span class="text-sm text-cream/60">/ 6 sessions</span>
+            </div>
+            <ul class="text-sm text-cream/80 space-y-2 mb-8">
+              <li>✓ Three medium areas</li>
+              <li>✓ Numbing cream included</li>
+              <li>✓ 12-month touch-ups</li>
+              <li>✓ Priority booking</li>
+            </ul>
+            <a href="#book" class="btn-solid">Choose Signature</a>
+          </article>
+
+          <article data-reveal class="price-card">
+            <h3 class="font-serif text-2xl">Couture</h3>
+            <p class="text-sm text-ink/60 mt-1">Full body · Face · Brazilian</p>
+            <div class="my-6 flex items-baseline gap-2">
+              <span class="font-serif text-5xl">₹89,900</span>
+              <span class="text-sm text-ink/50">/ 8 sessions</span>
+            </div>
+            <ul class="text-sm text-ink/70 space-y-2 mb-8">
+              <li>✓ Full body coverage</li>
+              <li>✓ Dedicated clinician</li>
+              <li>✓ Lifetime touch-ups</li>
+              <li>✓ Private suite</li>
+            </ul>
+            <a href="#book" class="btn-outline">Choose Couture</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== FAQ ============== -->
+    <section id="faq" class="px-6 md:px-12 py-24 md:py-36">
+      <div class="max-w-3xl mx-auto">
+        <p data-reveal class="uppercase tracking-[0.3em] text-xs text-wine mb-4">Questions</p>
+        <h2 data-reveal class="font-serif text-4xl md:text-6xl leading-[1.05] mb-12">
+          Things people <span class="italic text-wine">ask quietly.</span>
+        </h2>
+
+        <div class="divide-y divide-ink/10 border-y border-ink/10" id="faq-list">
+          <details data-reveal>
+            <summary>Does it actually hurt?</summary>
+            <div class="faq-body">
+              Most clients rate it 1–3 out of 10 — closer to a warm flick than
+              a wax. Numbing cream is included on sensitive areas like the
+              bikini line.
+            </div>
+          </details>
+          <details data-reveal>
+            <summary>Is it safe for darker skin?</summary>
+            <div class="faq-body">
+              Yes. Our 808nm diode is gold-standard for Fitzpatrick IV–VI.
+              We patch test at consultation and adjust fluence to your tone.
+            </div>
+          </details>
+          <details data-reveal>
+            <summary>How many sessions will I need?</summary>
+            <div class="faq-body">
+              Most clients see 80–90% reduction after 6 sessions, spaced 4–6
+              weeks apart. Hormonal areas (face, lower back) sometimes need
+              8–10.
+            </div>
+          </details>
+          <details data-reveal>
+            <summary>Are results permanent?</summary>
+            <div class="faq-body">
+              Yes — laser causes permanent reduction. Hormonal changes
+              (pregnancy, PCOS, menopause) can stimulate dormant follicles, so
+              we offer annual touch-ups.
+            </div>
+          </details>
+          <details data-reveal>
+            <summary>What should I avoid before a session?</summary>
+            <div class="faq-body">
+              Skip waxing or plucking for 4 weeks, sun and self-tan for 2
+              weeks. Shave the area 24 hours before. That's it.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== BOOK CTA ============== -->
+    <section
+      id="book"
+      class="relative px-6 md:px-12 py-28 md:py-40 bg-ink text-cream overflow-hidden"
+    >
+      <div class="laser-glow laser-glow-cta" aria-hidden="true"></div>
+      <div class="relative max-w-3xl mx-auto text-center">
+        <p data-reveal class="uppercase tracking-[0.3em] text-xs text-glow mb-6">Begin</p>
+        <h2
+          data-reveal
+          class="font-serif text-5xl md:text-7xl leading-[1.0] tracking-tight"
+        >
+          The last razor you'll<br />
+          <span class="italic text-glow">ever own.</span>
+        </h2>
+        <p data-reveal class="mt-8 text-cream/70 text-lg max-w-xl mx-auto">
+          Book a free 20-minute consultation with a senior clinician. No
+          pressure, no upsell — just a clear plan and an honest patch test.
+        </p>
+        <form
+          data-reveal
+          class="mt-12 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"
+          onsubmit="return handleBook(event)"
+        >
+          <input
+            type="email"
+            required
+            placeholder="your@email.com"
+            class="flex-1 bg-cream/10 border border-cream/20 px-5 py-4 rounded-full text-cream placeholder-cream/40 focus:outline-none focus:border-glow transition"
+          />
+          <button
+            type="submit"
+            class="bg-glow text-ink px-7 py-4 rounded-full text-sm tracking-wide hover:bg-cream transition-colors"
+          >
+            Reserve my slot →
+          </button>
+        </form>
+        <p data-reveal class="mt-6 text-xs text-cream/40">
+          We'll call within 24 hours. Your data stays with us.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============== FOOTER ============== -->
+    <footer class="px-6 md:px-12 py-12 bg-cream text-ink/60 text-sm">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+        <div>
+          <div class="font-serif text-2xl text-ink">
+            Lumi<span class="italic text-wine">è</span>re
+          </div>
+          <p class="mt-1 text-xs">© 2026 Lumière Skin Studio · Bandra West, Mumbai</p>
+        </div>
+        <div class="flex flex-wrap gap-6 text-xs uppercase tracking-widest">
+          <a href="#" class="hover:text-ink">Instagram</a>
+          <a href="#" class="hover:text-ink">WhatsApp</a>
+          <a href="#" class="hover:text-ink">Privacy</a>
+          <a href="#" class="hover:text-ink">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
