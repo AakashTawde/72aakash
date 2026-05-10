@@ -2,528 +2,554 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lumière — Premium Laser Hair Removal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0A7E8C" />
+    <title>Cozmaa Laser — The science of smooth.</title>
     <meta
       name="description"
-      content="Smooth, confident skin in fewer sessions. FDA-cleared diode laser technology, expertly delivered."
+      content="Premium diode laser hair removal, calibrated to your skin. 90% reduction in 6 sessions. By Cozmaa."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              serif: ['"Fraunces"', "serif"],
-              sans: ['"Inter"', "system-ui", "sans-serif"],
-            },
-            colors: {
-              ink: "#0E0B0A",
-              cream: "#F7F1EA",
-              rose: "#E8C4B8",
-              glow: "#F0A89B",
-              wine: "#5A1F2A",
-            },
-          },
-        },
-      };
-    </script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="bg-cream text-ink font-sans antialiased overflow-x-hidden">
+  <body class="loading">
+    <!-- ============== PRELOADER ============== -->
+    <div id="preloader" aria-hidden="true">
+      <div class="preloader-inner">
+        <svg viewBox="0 0 200 200" class="preloader-logo">
+          <defs>
+            <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0A7E8C" />
+              <stop offset="100%" stop-color="#D4A843" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="46" fill="none" stroke="url(#pg)" stroke-width="2" />
+          <text x="100" y="115" text-anchor="middle" font-family="Poppins" font-size="48" font-weight="700" fill="url(#pg)">C</text>
+        </svg>
+        <div class="preloader-bar"><span></span></div>
+        <div class="preloader-pct"><span id="pct">0</span>%</div>
+      </div>
+    </div>
+
+    <!-- ============== CUSTOM CURSOR ============== -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"><span class="cursor-label"></span></div>
+
     <!-- ============== NAV ============== -->
-    <nav
-      id="nav"
-      class="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between transition-all duration-500"
-    >
-      <a href="#" class="font-serif text-2xl tracking-tight" data-fade>
-        Lumi<span class="italic text-wine">è</span>re
+    <nav id="nav">
+      <a href="#" class="nav-logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+          <text x="14" y="19" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="15" fill="currentColor">c</text>
+        </svg>
+        <span>cozmaa<em>laser</em></span>
       </a>
-      <ul
-        class="hidden md:flex items-center gap-10 text-sm tracking-wide"
-        data-fade
-      >
-        <li><a href="#science" class="hover:text-wine transition">Science</a></li>
-        <li><a href="#process" class="hover:text-wine transition">Process</a></li>
-        <li><a href="#pricing" class="hover:text-wine transition">Pricing</a></li>
-        <li><a href="#faq" class="hover:text-wine transition">FAQ</a></li>
+      <ul class="nav-links">
+        <li><a href="#science" data-magnet>Science</a></li>
+        <li><a href="#process" data-magnet>Process</a></li>
+        <li><a href="#results" data-magnet>Results</a></li>
+        <li><a href="#pricing" data-magnet>Pricing</a></li>
+        <li><a href="#faq" data-magnet>FAQ</a></li>
       </ul>
-      <a
-        href="#book"
-        data-fade
-        class="hidden md:inline-flex items-center gap-2 bg-ink text-cream px-5 py-2.5 rounded-full text-sm hover:bg-wine transition-colors"
-      >
-        Book consultation
-        <span aria-hidden="true">→</span>
+      <a href="#book" class="nav-cta" data-magnet>
+        <span>Book free consult</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
+      <button class="nav-burger" aria-label="Menu"><span></span><span></span></button>
     </nav>
 
     <!-- ============== HERO ============== -->
-    <header class="relative min-h-screen flex items-center px-6 md:px-12 pt-24">
-      <!-- animated laser glow -->
-      <div class="laser-glow" aria-hidden="true"></div>
-      <div class="grain" aria-hidden="true"></div>
+    <header class="hero" id="hero">
+      <!-- 3D scene canvas -->
+      <div class="hero-scene" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-floor"></div>
+        <svg class="laser-svg" viewBox="0 0 1200 800" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="laserGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#D4A843" stop-opacity="0"/>
+              <stop offset="50%" stop-color="#D4A843" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#0A7E8C" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path class="laser-path" d="M -100 600 Q 300 200 600 400 T 1300 200" stroke="url(#laserGrad)" stroke-width="1.5" fill="none"/>
+          <path class="laser-path-2" d="M -100 200 Q 400 600 700 300 T 1300 500" stroke="url(#laserGrad)" stroke-width="1" fill="none" opacity="0.5"/>
+        </svg>
+      </div>
 
-      <div class="relative z-10 max-w-6xl mx-auto w-full grid md:grid-cols-12 gap-10 items-center">
-        <div class="md:col-span-7">
-          <p
-            data-reveal
-            class="uppercase tracking-[0.3em] text-xs text-wine mb-6"
-          >
-            FDA-cleared · Diode 808nm · Pain-managed
-          </p>
+      <div class="hero-grain" aria-hidden="true"></div>
 
-          <h1
-            class="font-serif font-light leading-[0.95] text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-tight"
-          >
-            <span data-reveal-line><span>Smooth skin,</span></span>
-            <span data-reveal-line><span class="italic text-wine">written</span></span>
-            <span data-reveal-line><span>in light.</span></span>
-          </h1>
-
-          <p
-            data-reveal
-            class="mt-8 text-lg md:text-xl max-w-xl text-ink/70 leading-relaxed"
-          >
-            A precision diode laser, a chilled sapphire tip, and a clinician who
-            actually listens. Up to 90% reduction in unwanted hair — in as few
-            as six sessions.
-          </p>
-
-          <div data-reveal class="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="#book"
-              class="group inline-flex items-center gap-3 bg-ink text-cream px-7 py-4 rounded-full text-sm tracking-wide hover:bg-wine transition-colors"
-            >
-              Book a free consultation
-              <span class="transition-transform group-hover:translate-x-1">→</span>
-            </a>
-            <a
-              href="#science"
-              class="inline-flex items-center gap-3 px-2 py-4 text-sm tracking-wide border-b border-ink/30 hover:border-ink transition-colors"
-            >
-              How it works
-            </a>
-          </div>
-
-          <div data-reveal class="mt-12 flex items-center gap-8 text-xs tracking-widest uppercase text-ink/50">
-            <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-              12,400+ sessions delivered
-            </div>
-            <div class="hidden sm:block">★ 4.9 / 5 · Google Reviews</div>
-          </div>
+      <div class="hero-inner">
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          <span>FDA-cleared · Diode 808nm · Safe for all skin tones</span>
         </div>
 
-        <!-- floating treatment card -->
-        <div class="md:col-span-5 relative">
-          <div data-float class="hero-card">
-            <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden bg-gradient-to-br from-rose via-glow to-wine">
-              <div class="scan-line" aria-hidden="true"></div>
-              <div class="absolute inset-0 mix-blend-soft-light opacity-60 pattern-dots"></div>
-              <div class="absolute bottom-0 left-0 right-0 p-6 text-cream">
-                <div class="flex items-center justify-between mb-2 text-xs tracking-widest opacity-80">
-                  <span>SESSION 04 / 06</span>
-                  <span>● LIVE</span>
-                </div>
-                <p class="font-serif text-2xl leading-tight">Underarms</p>
-                <p class="text-sm opacity-80">14 min · Pain level 2/10</p>
-                <div class="mt-4 h-1 bg-cream/20 rounded-full overflow-hidden">
-                  <div class="h-full bg-cream rounded-full progress-bar"></div>
-                </div>
-              </div>
-            </div>
+        <h1 class="hero-title">
+          <span class="line"><span class="word">The</span> <span class="word">science</span></span>
+          <span class="line"><span class="word">of</span> <span class="word italic accent">smooth.</span></span>
+        </h1>
 
-            <!-- floating chip 1 -->
-            <div data-float-chip class="floating-chip floating-chip-1">
-              <div class="text-[10px] tracking-widest text-ink/50">REDUCTION</div>
-              <div class="font-serif text-2xl">88<span class="text-base">%</span></div>
+        <p class="hero-sub">
+          Cozmaa Laser — premium diode hair removal, calibrated to your skin.
+          Up to <strong>90% reduction</strong> in as few as <strong>6 sessions</strong>.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#book" class="btn btn-primary" data-magnet>
+            <span>Book free consult</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 8h13M8 1l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#science" class="btn btn-ghost" data-magnet data-cursor="explore">
+            <span class="play-circle"><span class="play-tri"></span></span>
+            See how it works
+          </a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="trust-item"><strong>12,400+</strong><span>sessions delivered</span></div>
+          <div class="trust-item"><strong>4.9 ★</strong><span>Google Reviews</span></div>
+          <div class="trust-item"><strong>I–VI</strong><span>Fitzpatrick safe</span></div>
+        </div>
+      </div>
+
+      <!-- 3D floating device card -->
+      <div class="hero-device" data-tilt>
+        <div class="device-card">
+          <div class="device-screen">
+            <div class="scan"></div>
+            <div class="device-header">
+              <span>● LIVE</span>
+              <span>SESSION 4 / 6</span>
             </div>
-            <!-- floating chip 2 -->
-            <div data-float-chip class="floating-chip floating-chip-2">
-              <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span class="text-xs">Cooling at 4°C</span>
+            <div class="device-body">
+              <div class="device-area">Underarms</div>
+              <div class="device-meta">14 min · pain 2/10</div>
+              <div class="device-progress"><span></span></div>
+              <div class="device-stats">
+                <div><b>808<i>nm</i></b><em>wavelength</em></div>
+                <div><b>4<i>°C</i></b><em>cooling</em></div>
+                <div><b>88<i>%</i></b><em>reduction</em></div>
               </div>
             </div>
           </div>
         </div>
+        <div class="chip chip-1">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5" stroke="#0A7E8C" stroke-width="1.5"/><circle cx="7" cy="7" r="2" fill="#D4A843"/></svg>
+          <span>Targeting follicle</span>
+        </div>
+        <div class="chip chip-2">
+          <span class="ping"></span>
+          <span>Cooling 4°C</span>
+        </div>
       </div>
 
-      <!-- scroll cue -->
-      <div
-        data-reveal
-        class="absolute bottom-8 left-1/2 -translate-x-1/2 text-xs uppercase tracking-[0.3em] text-ink/40 flex flex-col items-center gap-2"
-      >
-        Scroll
-        <span class="scroll-line"></span>
-      </div>
+      <a href="#science" class="scroll-cue">
+        <span>Scroll</span>
+        <svg width="14" height="48" viewBox="0 0 14 48" fill="none"><path d="M7 1v40M1 35l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
     </header>
 
     <!-- ============== MARQUEE ============== -->
-    <section class="border-y border-ink/10 py-6 overflow-hidden bg-cream">
-      <div class="marquee flex gap-16 whitespace-nowrap font-serif text-2xl text-ink/40">
-        <span>Underarms</span><span>•</span>
-        <span>Legs</span><span>•</span>
-        <span>Brazilian</span><span>•</span>
-        <span>Upper Lip</span><span>•</span>
-        <span>Bikini</span><span>•</span>
-        <span>Back</span><span>•</span>
-        <span>Chest</span><span>•</span>
-        <span>Arms</span><span>•</span>
-        <span>Face</span><span>•</span>
-        <!-- duplicate for seamless loop -->
-        <span>Underarms</span><span>•</span>
-        <span>Legs</span><span>•</span>
-        <span>Brazilian</span><span>•</span>
-        <span>Upper Lip</span><span>•</span>
-        <span>Bikini</span><span>•</span>
-        <span>Back</span><span>•</span>
-        <span>Chest</span><span>•</span>
-        <span>Arms</span><span>•</span>
-        <span>Face</span><span>•</span>
+    <section class="marquee-band">
+      <div class="marquee-track">
+        <span>Underarms</span><span class="dotsep">✦</span>
+        <span>Brazilian</span><span class="dotsep">✦</span>
+        <span>Full legs</span><span class="dotsep">✦</span>
+        <span>Upper lip</span><span class="dotsep">✦</span>
+        <span>Bikini</span><span class="dotsep">✦</span>
+        <span>Back</span><span class="dotsep">✦</span>
+        <span>Chest</span><span class="dotsep">✦</span>
+        <span>Arms</span><span class="dotsep">✦</span>
+        <span>Face</span><span class="dotsep">✦</span>
+        <span>Underarms</span><span class="dotsep">✦</span>
+        <span>Brazilian</span><span class="dotsep">✦</span>
+        <span>Full legs</span><span class="dotsep">✦</span>
+        <span>Upper lip</span><span class="dotsep">✦</span>
+        <span>Bikini</span><span class="dotsep">✦</span>
+        <span>Back</span><span class="dotsep">✦</span>
+        <span>Chest</span><span class="dotsep">✦</span>
+        <span>Arms</span><span class="dotsep">✦</span>
+        <span>Face</span><span class="dotsep">✦</span>
       </div>
     </section>
 
-    <!-- ============== SCIENCE ============== -->
-    <section id="science" class="px-6 md:px-12 py-24 md:py-36">
-      <div class="max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-12 gap-12 items-end mb-20">
-          <div class="md:col-span-7">
-            <p data-reveal class="uppercase tracking-[0.3em] text-xs text-wine mb-4">The science</p>
-            <h2
-              data-reveal
-              class="font-serif text-4xl md:text-6xl leading-[1.05] tracking-tight"
-            >
-              Selective photothermolysis,<br />
-              <span class="italic text-wine">tuned to you.</span>
-            </h2>
-          </div>
-          <p data-reveal class="md:col-span-5 text-ink/70 text-lg leading-relaxed">
-            Our 808nm diode targets melanin in the follicle, heating it to the
-            point of permanent disablement — without damaging the surrounding
-            skin. We adjust fluence, pulse and cooling to your tone and
-            sensitivity, every single session.
-          </p>
-        </div>
+    <!-- ============== SCIENCE / PINNED HORIZONTAL ============== -->
+    <section id="science" class="science">
+      <div class="science-header">
+        <p class="eyebrow">The science</p>
+        <h2 class="display">
+          <span class="reveal-text">Selective photothermolysis,</span>
+          <span class="reveal-text"><em class="accent">tuned to you.</em></span>
+        </h2>
+        <p class="lede reveal-text">
+          A 808nm diode targets melanin in the follicle, heating it to permanent
+          disablement — without harming the surrounding skin.
+        </p>
+      </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
-          <article data-reveal class="science-card">
-            <div class="science-num">01</div>
-            <h3 class="font-serif text-2xl mb-3">Targeted</h3>
-            <p class="text-ink/70 text-sm leading-relaxed">
-              The 808nm wavelength penetrates 4–6mm — deep enough to reach the
-              follicle's bulb and bulge, where regrowth begins.
-            </p>
+      <div class="pin-wrap">
+        <div class="pin-track">
+          <article class="panel panel-1">
+            <div class="panel-num">01</div>
+            <h3 class="panel-title">Targeted</h3>
+            <p>The 808nm wavelength penetrates 4–6mm — deep enough to reach the follicle's bulb and bulge, where regrowth begins.</p>
+            <div class="panel-visual visual-targeted">
+              <div class="skin-layer"></div>
+              <div class="follicle"><span></span></div>
+              <div class="beam"></div>
+            </div>
           </article>
-          <article data-reveal class="science-card">
-            <div class="science-num">02</div>
-            <h3 class="font-serif text-2xl mb-3">Cooled</h3>
-            <p class="text-ink/70 text-sm leading-relaxed">
-              A sapphire tip chilled to 4°C glides over the skin, neutralising
-              heat at the surface — so all the energy goes where it should.
-            </p>
+
+          <article class="panel panel-2">
+            <div class="panel-num">02</div>
+            <h3 class="panel-title">Cooled</h3>
+            <p>A sapphire tip chilled to 4°C glides over the skin, neutralising heat at the surface so all the energy goes where it should.</p>
+            <div class="panel-visual visual-cooled">
+              <svg viewBox="0 0 200 200" class="snowflake">
+                <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none">
+                  <line x1="100" y1="20" x2="100" y2="180"/>
+                  <line x1="20" y1="100" x2="180" y2="100"/>
+                  <line x1="40" y1="40" x2="160" y2="160"/>
+                  <line x1="160" y1="40" x2="40" y2="160"/>
+                  <path d="M85 30 L100 40 L115 30 M85 170 L100 160 L115 170 M30 85 L40 100 L30 115 M170 85 L160 100 L170 115"/>
+                </g>
+              </svg>
+              <div class="temp">4°C</div>
+            </div>
           </article>
-          <article data-reveal class="science-card">
-            <div class="science-num">03</div>
-            <h3 class="font-serif text-2xl mb-3">Calibrated</h3>
-            <p class="text-ink/70 text-sm leading-relaxed">
-              Safe across Fitzpatrick I–VI. Each protocol is dialled to your
-              skin tone, hair density and area — never one-size-fits-all.
-            </p>
+
+          <article class="panel panel-3">
+            <div class="panel-num">03</div>
+            <h3 class="panel-title">Calibrated</h3>
+            <p>Safe across Fitzpatrick I–VI. Each protocol is dialled to your skin tone, hair density and area — never one-size-fits-all.</p>
+            <div class="panel-visual visual-calibrated">
+              <div class="tones">
+                <span style="--c:#FBE5D6"></span>
+                <span style="--c:#F2C9A1"></span>
+                <span style="--c:#D9A06B"></span>
+                <span style="--c:#A8723C"></span>
+                <span style="--c:#7A4A1F"></span>
+                <span style="--c:#4A2C0F"></span>
+              </div>
+              <div class="dial"><span></span></div>
+            </div>
+          </article>
+
+          <article class="panel panel-4 panel-final">
+            <div class="panel-num">04</div>
+            <h3 class="panel-title">Permanent</h3>
+            <p>FDA-classed permanent reduction. Shedding begins in 10 days. Most clients are razor-free after 6 sessions.</p>
+            <div class="panel-visual visual-permanent">
+              <div class="circle-stat">
+                <svg viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="52" stroke="currentColor" stroke-width="2" fill="none" opacity="0.15"/>
+                  <circle class="circle-progress" cx="60" cy="60" r="52" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+                </svg>
+                <div class="circle-num"><span class="count" data-target="90">0</span>%</div>
+              </div>
+              <p class="circle-label">average reduction after 6 sessions</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============== PROCESS / TIMELINE ============== -->
-    <section id="process" class="bg-ink text-cream px-6 md:px-12 py-24 md:py-36 relative overflow-hidden">
-      <div class="absolute inset-0 pattern-dots opacity-[0.04]" aria-hidden="true"></div>
-      <div class="max-w-6xl mx-auto relative">
-        <div class="mb-20">
-          <p data-reveal class="uppercase tracking-[0.3em] text-xs text-glow mb-4">The process</p>
-          <h2 data-reveal class="font-serif text-4xl md:text-6xl leading-[1.05]">
-            Six sessions.<br />
-            <span class="italic text-glow">A lifetime of smooth.</span>
+    <!-- ============== PROCESS / SCROLL TIMELINE ============== -->
+    <section id="process" class="process">
+      <div class="process-bg" aria-hidden="true"></div>
+      <div class="process-inner">
+        <div class="process-head">
+          <p class="eyebrow light">The process</p>
+          <h2 class="display light">
+            <span class="reveal-text">Six sessions.</span>
+            <span class="reveal-text"><em class="accent-gold">A lifetime smooth.</em></span>
           </h2>
         </div>
 
-        <ol class="relative grid gap-px bg-cream/10 md:grid-cols-4 rounded-3xl overflow-hidden">
-          <li data-reveal class="step">
-            <div class="step-num">01</div>
-            <h3 class="font-serif text-xl mb-2">Consult</h3>
-            <p class="text-cream/60 text-sm leading-relaxed">
-              Free 20-minute skin assessment, patch test and treatment plan.
-            </p>
+        <ol class="timeline">
+          <li class="step">
+            <div class="step-rail"><span class="dot"></span></div>
+            <div class="step-content">
+              <div class="step-num">01 — Consult</div>
+              <h3>Free assessment</h3>
+              <p>20-minute skin & hair assessment, patch test on a small area, custom protocol drafted on the spot.</p>
+              <div class="step-meta">
+                <span>20 min</span><span>Free</span><span>Patch test included</span>
+              </div>
+            </div>
           </li>
-          <li data-reveal class="step">
-            <div class="step-num">02</div>
-            <h3 class="font-serif text-xl mb-2">Prep</h3>
-            <p class="text-cream/60 text-sm leading-relaxed">
-              Shave the area 24 hours before. We handle the rest — no waxing
-              needed.
-            </p>
+          <li class="step">
+            <div class="step-rail"><span class="dot"></span></div>
+            <div class="step-content">
+              <div class="step-num">02 — Prep</div>
+              <h3>Shave 24 hrs before</h3>
+              <p>No waxing or plucking for 4 weeks. Skip retinol and AHAs for 5 days. We handle everything else.</p>
+              <div class="step-meta">
+                <span>24 hrs</span><span>No wax</span><span>No sun</span>
+              </div>
+            </div>
           </li>
-          <li data-reveal class="step">
-            <div class="step-num">03</div>
-            <h3 class="font-serif text-xl mb-2">Treat</h3>
-            <p class="text-cream/60 text-sm leading-relaxed">
-              15–45 minutes per area. Most clients describe a warm rubber band.
-            </p>
+          <li class="step">
+            <div class="step-rail"><span class="dot"></span></div>
+            <div class="step-content">
+              <div class="step-num">03 — Treat</div>
+              <h3>15–45 min, glide-and-go</h3>
+              <p>Numbing cream included on sensitive areas. Cooled sapphire tip means most clients describe a warm rubber band, not a sting.</p>
+              <div class="step-meta">
+                <span>Pain 2/10</span><span>Cooled tip</span><span>No downtime</span>
+              </div>
+            </div>
           </li>
-          <li data-reveal class="step">
-            <div class="step-num">04</div>
-            <h3 class="font-serif text-xl mb-2">Glow</h3>
-            <p class="text-cream/60 text-sm leading-relaxed">
-              Visible shedding within 10 days. Return every 4–6 weeks.
-            </p>
+          <li class="step">
+            <div class="step-rail"><span class="dot"></span></div>
+            <div class="step-content">
+              <div class="step-num">04 — Glow</div>
+              <h3>Shed in 10 days</h3>
+              <p>Visible shedding within 7–10 days. Return every 4–6 weeks. Most clients see 80–90% reduction by session 6.</p>
+              <div class="step-meta">
+                <span>10 days</span><span>4–6 wk gap</span><span>6 sessions avg</span>
+              </div>
+            </div>
           </li>
         </ol>
 
-        <div class="mt-16 grid md:grid-cols-3 gap-10" data-reveal>
-          <div>
-            <div class="font-serif text-5xl md:text-6xl text-glow" data-counter data-target="90">0</div>
-            <p class="mt-2 text-cream/70 text-sm">% average reduction after 6 sessions</p>
+        <div class="process-stats">
+          <div class="stat">
+            <div class="stat-num"><span class="count" data-target="90">0</span>%</div>
+            <div class="stat-label">avg reduction by session 6</div>
           </div>
-          <div>
-            <div class="font-serif text-5xl md:text-6xl text-glow" data-counter data-target="15">0</div>
-            <p class="mt-2 text-cream/70 text-sm">minutes for underarms · pain level 2/10</p>
+          <div class="stat">
+            <div class="stat-num"><span class="count" data-target="15">0</span><i>min</i></div>
+            <div class="stat-label">underarms · pain 2/10</div>
           </div>
-          <div>
-            <div class="font-serif text-5xl md:text-6xl text-glow"><span data-counter data-target="12">0</span>k+</div>
-            <p class="mt-2 text-cream/70 text-sm">sessions delivered since 2019</p>
+          <div class="stat">
+            <div class="stat-num"><span class="count" data-target="12">0</span>k+</div>
+            <div class="stat-label">sessions since 2019</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num"><span class="count" data-target="98">0</span>%</div>
+            <div class="stat-label">would refer a friend</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============== TESTIMONIALS ============== -->
-    <section class="px-6 md:px-12 py-24 md:py-36">
-      <div class="max-w-6xl mx-auto">
-        <p data-reveal class="uppercase tracking-[0.3em] text-xs text-wine mb-4">Loved by 12,000+</p>
-        <h2 data-reveal class="font-serif text-4xl md:text-6xl leading-[1.05] mb-16 max-w-3xl">
-          What clients <span class="italic text-wine">whisper</span> after.
+    <!-- ============== RESULTS / IMAGE REVEAL ============== -->
+    <section id="results" class="results">
+      <div class="results-head">
+        <p class="eyebrow">Real results</p>
+        <h2 class="display">
+          <span class="reveal-text">Before.</span>
+          <span class="reveal-text"><em class="accent">After.</em></span>
         </h2>
+      </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
-          <figure data-reveal class="testimonial">
-            <blockquote class="font-serif text-xl leading-snug">
-              "I stopped shaving two years ago and haven't thought about it
-              since. Worth every rupee."
-            </blockquote>
-            <figcaption class="mt-6 text-sm text-ink/60">
-              <strong class="text-ink">Priya M.</strong> · 8 sessions, full legs
-            </figcaption>
-          </figure>
-          <figure data-reveal class="testimonial bg-ink text-cream">
-            <blockquote class="font-serif text-xl leading-snug">
-              "The chilled tip is genuinely painless. I scrolled Instagram
-              through my underarm session."
-            </blockquote>
-            <figcaption class="mt-6 text-sm text-cream/60">
-              <strong class="text-cream">Aisha R.</strong> · 6 sessions, underarms
-            </figcaption>
-          </figure>
-          <figure data-reveal class="testimonial">
-            <blockquote class="font-serif text-xl leading-snug">
-              "I have darker skin and was nervous. They patch-tested, calibrated,
-              explained every step. Zero burns, zero issues."
-            </blockquote>
-            <figcaption class="mt-6 text-sm text-ink/60">
-              <strong class="text-ink">Karan S.</strong> · 10 sessions, back & chest
-            </figcaption>
-          </figure>
-        </div>
+      <div class="results-grid">
+        <article class="result-card" data-tilt>
+          <div class="ba-frame">
+            <div class="ba before"><span>BEFORE</span></div>
+            <div class="ba after"><span>AFTER · 6 SESSIONS</span></div>
+            <div class="ba-divider"></div>
+          </div>
+          <h3>Underarms · Priya M.</h3>
+          <p>"I stopped shaving two years ago and haven't thought about it since."</p>
+        </article>
+        <article class="result-card" data-tilt>
+          <div class="ba-frame ba-2">
+            <div class="ba before"><span>BEFORE</span></div>
+            <div class="ba after"><span>AFTER · 8 SESSIONS</span></div>
+            <div class="ba-divider"></div>
+          </div>
+          <h3>Full legs · Aisha R.</h3>
+          <p>"Painless. I scrolled Instagram through the whole session."</p>
+        </article>
+        <article class="result-card" data-tilt>
+          <div class="ba-frame ba-3">
+            <div class="ba before"><span>BEFORE</span></div>
+            <div class="ba after"><span>AFTER · 10 SESSIONS</span></div>
+            <div class="ba-divider"></div>
+          </div>
+          <h3>Back & chest · Karan S.</h3>
+          <p>"Patch-tested, calibrated, explained. Zero burns. Zero issues."</p>
+        </article>
       </div>
     </section>
 
     <!-- ============== PRICING ============== -->
-    <section id="pricing" class="px-6 md:px-12 py-24 md:py-36 bg-rose/30">
-      <div class="max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-12 gap-10 items-end mb-16">
-          <div class="md:col-span-7">
-            <p data-reveal class="uppercase tracking-[0.3em] text-xs text-wine mb-4">Packages</p>
-            <h2 data-reveal class="font-serif text-4xl md:text-6xl leading-[1.05]">
-              No hidden fees.<br />
-              <span class="italic text-wine">No upsells.</span>
-            </h2>
-          </div>
-          <p data-reveal class="md:col-span-5 text-ink/70 leading-relaxed">
-            All packages include consultation, patch test, post-care and
-            unlimited touch-ups within 12 months.
-          </p>
+    <section id="pricing" class="pricing">
+      <div class="pricing-head">
+        <div>
+          <p class="eyebrow">Packages</p>
+          <h2 class="display">
+            <span class="reveal-text">No hidden fees.</span>
+            <span class="reveal-text"><em class="accent">No upsells.</em></span>
+          </h2>
         </div>
+        <p class="lede reveal-text">
+          All packages include consultation, patch test, post-care kit, and
+          unlimited touch-ups within 12 months.
+        </p>
+      </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
-          <article data-reveal class="price-card">
-            <h3 class="font-serif text-2xl">Essentials</h3>
-            <p class="text-sm text-ink/60 mt-1">Underarms · Upper lip · Chin</p>
-            <div class="my-6 flex items-baseline gap-2">
-              <span class="font-serif text-5xl">₹14,900</span>
-              <span class="text-sm text-ink/50">/ 6 sessions</span>
-            </div>
-            <ul class="text-sm text-ink/70 space-y-2 mb-8">
-              <li>✓ Single small area</li>
-              <li>✓ Cooling included</li>
-              <li>✓ 12-month touch-ups</li>
-            </ul>
-            <a href="#book" class="btn-outline">Choose Essentials</a>
-          </article>
+      <div class="pricing-grid">
+        <article class="price-card" data-tilt>
+          <header>
+            <h3>Essentials</h3>
+            <p>Underarms · Upper lip · Chin</p>
+          </header>
+          <div class="price"><span class="cur">₹</span>14,900<em>/ 6 sessions</em></div>
+          <ul>
+            <li>Single small area</li>
+            <li>Cooling tip included</li>
+            <li>12-month touch-ups</li>
+            <li>Post-care kit</li>
+          </ul>
+          <a href="#book" class="btn btn-outline" data-magnet>Choose Essentials</a>
+        </article>
 
-          <article data-reveal class="price-card price-card-popular">
-            <div class="absolute -top-3 left-6 bg-wine text-cream text-[10px] tracking-widest uppercase px-3 py-1 rounded-full">
-              Most chosen
-            </div>
-            <h3 class="font-serif text-2xl">Signature</h3>
-            <p class="text-sm text-cream/70 mt-1">Underarms · Bikini · Half legs</p>
-            <div class="my-6 flex items-baseline gap-2">
-              <span class="font-serif text-5xl">₹39,900</span>
-              <span class="text-sm text-cream/60">/ 6 sessions</span>
-            </div>
-            <ul class="text-sm text-cream/80 space-y-2 mb-8">
-              <li>✓ Three medium areas</li>
-              <li>✓ Numbing cream included</li>
-              <li>✓ 12-month touch-ups</li>
-              <li>✓ Priority booking</li>
-            </ul>
-            <a href="#book" class="btn-solid">Choose Signature</a>
-          </article>
+        <article class="price-card popular" data-tilt>
+          <span class="badge">Most chosen</span>
+          <header>
+            <h3>Signature</h3>
+            <p>Underarms · Bikini · Half legs</p>
+          </header>
+          <div class="price"><span class="cur">₹</span>39,900<em>/ 6 sessions</em></div>
+          <ul>
+            <li>Three medium areas</li>
+            <li>Numbing cream included</li>
+            <li>Priority booking</li>
+            <li>12-month touch-ups</li>
+          </ul>
+          <a href="#book" class="btn btn-primary full" data-magnet>Choose Signature</a>
+        </article>
 
-          <article data-reveal class="price-card">
-            <h3 class="font-serif text-2xl">Couture</h3>
-            <p class="text-sm text-ink/60 mt-1">Full body · Face · Brazilian</p>
-            <div class="my-6 flex items-baseline gap-2">
-              <span class="font-serif text-5xl">₹89,900</span>
-              <span class="text-sm text-ink/50">/ 8 sessions</span>
-            </div>
-            <ul class="text-sm text-ink/70 space-y-2 mb-8">
-              <li>✓ Full body coverage</li>
-              <li>✓ Dedicated clinician</li>
-              <li>✓ Lifetime touch-ups</li>
-              <li>✓ Private suite</li>
-            </ul>
-            <a href="#book" class="btn-outline">Choose Couture</a>
-          </article>
-        </div>
+        <article class="price-card" data-tilt>
+          <header>
+            <h3>Couture</h3>
+            <p>Full body · Face · Brazilian</p>
+          </header>
+          <div class="price"><span class="cur">₹</span>89,900<em>/ 8 sessions</em></div>
+          <ul>
+            <li>Full body coverage</li>
+            <li>Dedicated clinician</li>
+            <li>Lifetime touch-ups</li>
+            <li>Private suite</li>
+          </ul>
+          <a href="#book" class="btn btn-outline" data-magnet>Choose Couture</a>
+        </article>
       </div>
     </section>
 
     <!-- ============== FAQ ============== -->
-    <section id="faq" class="px-6 md:px-12 py-24 md:py-36">
-      <div class="max-w-3xl mx-auto">
-        <p data-reveal class="uppercase tracking-[0.3em] text-xs text-wine mb-4">Questions</p>
-        <h2 data-reveal class="font-serif text-4xl md:text-6xl leading-[1.05] mb-12">
-          Things people <span class="italic text-wine">ask quietly.</span>
+    <section id="faq" class="faq">
+      <div class="faq-inner">
+        <p class="eyebrow">Questions</p>
+        <h2 class="display">
+          <span class="reveal-text">Things people</span>
+          <span class="reveal-text"><em class="accent">ask quietly.</em></span>
         </h2>
 
-        <div class="divide-y divide-ink/10 border-y border-ink/10" id="faq-list">
-          <details data-reveal>
-            <summary>Does it actually hurt?</summary>
-            <div class="faq-body">
-              Most clients rate it 1–3 out of 10 — closer to a warm flick than
-              a wax. Numbing cream is included on sensitive areas like the
-              bikini line.
-            </div>
+        <div class="faq-list">
+          <details>
+            <summary>Does it actually hurt?<span class="plus"></span></summary>
+            <div class="faq-body">Most clients rate it 1–3 out of 10 — closer to a warm flick than a wax. Numbing cream is included on sensitive areas like the bikini line.</div>
           </details>
-          <details data-reveal>
-            <summary>Is it safe for darker skin?</summary>
-            <div class="faq-body">
-              Yes. Our 808nm diode is gold-standard for Fitzpatrick IV–VI.
-              We patch test at consultation and adjust fluence to your tone.
-            </div>
+          <details>
+            <summary>Is it safe for darker skin?<span class="plus"></span></summary>
+            <div class="faq-body">Yes. Our 808nm diode is gold-standard for Fitzpatrick IV–VI. We patch test at consultation and adjust fluence to your tone — every single session.</div>
           </details>
-          <details data-reveal>
-            <summary>How many sessions will I need?</summary>
-            <div class="faq-body">
-              Most clients see 80–90% reduction after 6 sessions, spaced 4–6
-              weeks apart. Hormonal areas (face, lower back) sometimes need
-              8–10.
-            </div>
+          <details>
+            <summary>How many sessions will I need?<span class="plus"></span></summary>
+            <div class="faq-body">Most clients see 80–90% reduction after 6 sessions, spaced 4–6 weeks apart. Hormonal areas (face, lower back) sometimes need 8–10.</div>
           </details>
-          <details data-reveal>
-            <summary>Are results permanent?</summary>
-            <div class="faq-body">
-              Yes — laser causes permanent reduction. Hormonal changes
-              (pregnancy, PCOS, menopause) can stimulate dormant follicles, so
-              we offer annual touch-ups.
-            </div>
+          <details>
+            <summary>Are results permanent?<span class="plus"></span></summary>
+            <div class="faq-body">Yes — laser causes permanent reduction. Hormonal changes (pregnancy, PCOS, menopause) can stimulate dormant follicles, so we offer annual touch-ups.</div>
           </details>
-          <details data-reveal>
-            <summary>What should I avoid before a session?</summary>
-            <div class="faq-body">
-              Skip waxing or plucking for 4 weeks, sun and self-tan for 2
-              weeks. Shave the area 24 hours before. That's it.
-            </div>
+          <details>
+            <summary>What should I avoid before a session?<span class="plus"></span></summary>
+            <div class="faq-body">Skip waxing or plucking for 4 weeks, sun and self-tan for 2 weeks, retinol and AHAs for 5 days. Shave the area 24 hours before. That's it.</div>
+          </details>
+          <details>
+            <summary>Can I do laser if I have PCOS?<span class="plus"></span></summary>
+            <div class="faq-body">Absolutely — and it's one of the most effective long-term tools for PCOS-related hair growth. We may recommend slightly more sessions and 6-monthly touch-ups.</div>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- ============== BOOK CTA ============== -->
-    <section
-      id="book"
-      class="relative px-6 md:px-12 py-28 md:py-40 bg-ink text-cream overflow-hidden"
-    >
-      <div class="laser-glow laser-glow-cta" aria-hidden="true"></div>
-      <div class="relative max-w-3xl mx-auto text-center">
-        <p data-reveal class="uppercase tracking-[0.3em] text-xs text-glow mb-6">Begin</p>
-        <h2
-          data-reveal
-          class="font-serif text-5xl md:text-7xl leading-[1.0] tracking-tight"
-        >
-          The last razor you'll<br />
-          <span class="italic text-glow">ever own.</span>
+    <!-- ============== CTA ============== -->
+    <section id="book" class="cta">
+      <div class="cta-bg" aria-hidden="true">
+        <span class="orb orb-cta-1"></span>
+        <span class="orb orb-cta-2"></span>
+      </div>
+      <div class="cta-inner">
+        <p class="eyebrow light">Begin</p>
+        <h2 class="cta-title">
+          <span class="reveal-text">The last razor</span>
+          <span class="reveal-text">you'll <em class="accent-gold">ever own.</em></span>
         </h2>
-        <p data-reveal class="mt-8 text-cream/70 text-lg max-w-xl mx-auto">
-          Book a free 20-minute consultation with a senior clinician. No
-          pressure, no upsell — just a clear plan and an honest patch test.
+        <p class="cta-sub reveal-text">
+          Free 20-minute consultation with a senior clinician. No pressure, no
+          upsell — just an honest patch test and a clear plan.
         </p>
-        <form
-          data-reveal
-          class="mt-12 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"
-          onsubmit="return handleBook(event)"
-        >
-          <input
-            type="email"
-            required
-            placeholder="your@email.com"
-            class="flex-1 bg-cream/10 border border-cream/20 px-5 py-4 rounded-full text-cream placeholder-cream/40 focus:outline-none focus:border-glow transition"
-          />
-          <button
-            type="submit"
-            class="bg-glow text-ink px-7 py-4 rounded-full text-sm tracking-wide hover:bg-cream transition-colors"
-          >
-            Reserve my slot →
+        <form class="cta-form reveal-text" onsubmit="return handleBook(event)">
+          <input type="email" required placeholder="your@email.com" />
+          <button type="submit" data-magnet>
+            <span>Reserve my slot</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </form>
-        <p data-reveal class="mt-6 text-xs text-cream/40">
-          We'll call within 24 hours. Your data stays with us.
-        </p>
+        <p class="cta-fineprint reveal-text">We call within 24 hrs. Your data stays with us.</p>
       </div>
     </section>
 
     <!-- ============== FOOTER ============== -->
-    <footer class="px-6 md:px-12 py-12 bg-cream text-ink/60 text-sm">
-      <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
-        <div>
-          <div class="font-serif text-2xl text-ink">
-            Lumi<span class="italic text-wine">è</span>re
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="nav-logo big">
+            <svg width="36" height="36" viewBox="0 0 28 28" fill="none">
+              <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+              <text x="14" y="19" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="15" fill="currentColor">c</text>
+            </svg>
+            <span>cozmaa<em>laser</em></span>
           </div>
-          <p class="mt-1 text-xs">© 2026 Lumière Skin Studio · Bandra West, Mumbai</p>
+          <p>Premium diode laser hair removal.<br/>Bandra West, Mumbai.</p>
         </div>
-        <div class="flex flex-wrap gap-6 text-xs uppercase tracking-widest">
-          <a href="#" class="hover:text-ink">Instagram</a>
-          <a href="#" class="hover:text-ink">WhatsApp</a>
-          <a href="#" class="hover:text-ink">Privacy</a>
-          <a href="#" class="hover:text-ink">Terms</a>
+        <div class="footer-cols">
+          <div>
+            <h4>Treatments</h4>
+            <ul><li><a href="#">Underarms</a></li><li><a href="#">Bikini</a></li><li><a href="#">Full body</a></li><li><a href="#">Face</a></li></ul>
+          </div>
+          <div>
+            <h4>Studio</h4>
+            <ul><li><a href="#">About</a></li><li><a href="#">Clinicians</a></li><li><a href="#">Reviews</a></li><li><a href="#">Press</a></li></ul>
+          </div>
+          <div>
+            <h4>Connect</h4>
+            <ul><li><a href="#">Instagram</a></li><li><a href="#">WhatsApp</a></li><li><a href="#">Email</a></li></ul>
+          </div>
         </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Cozmaa Laser</span>
+        <span>Crafted with motion in Mumbai</span>
       </div>
     </footer>
 
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script type="module" src="./script.js"></script>
   </body>
 </html>

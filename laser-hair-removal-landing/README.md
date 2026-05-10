@@ -1,36 +1,45 @@
-# Lumière — Laser Hair Removal Motion Landing Page
+# Cozmaa Laser — Motion Landing Page
 
-A self-contained, motion-rich landing page for a premium laser hair removal
-clinic. Built with vanilla HTML, Tailwind CSS (CDN) and a small motion layer
-in vanilla JS — no build step required.
+A motion-rich landing page for Cozmaa Laser hair removal.
 
-## Run it
+**Brand:** colours and fonts pulled from
+`cozmaa-whatsapp-presentation/src/theme.ts` — teal `#0A7E8C`, gold `#D4A843`,
+navy `#1B2D4F`, off-white `#F7FAFB`, fonts Inter + Poppins.
+
+**Stack:** vanilla HTML + CSS + JS, GSAP 3.12 + ScrollTrigger via CDN. No
+build step.
+
+## Run
 
 ```bash
-# Any static server works. From this folder:
 python3 -m http.server 5173
-# or
-npx serve .
+# open http://localhost:5173
 ```
 
-Then open http://localhost:5173.
+## Motion inventory
 
-## What's animated
-
-- Hero headline reveals line-by-line on load
-- Floating treatment card with parallax tilt on hover
-- Animated laser glow + scan line + progress bar
-- IntersectionObserver-driven section reveals with staggered children
-- Number counters that animate on enter
-- Custom cursor (dot + lagging ring) that grows on interactive elements
-- Marquee strip of treatment areas
-- Science cards with a mouse-tracking spotlight
-- FAQ accordion with rotating "+" indicator
-- Sticky nav that frosts on scroll
-- Honors `prefers-reduced-motion`
+- Animated preloader with progress bar + brand mark
+- Custom cursor (dot + lagging ring) with magnetic buttons
+- Hero intro: word-by-word stagger reveal, eyebrow + sub fade, device card
+  scale-in, chip back-out, full timeline orchestrated with GSAP
+- 3D hero device: mouse-tilt + scroll parallax with `transformPerspective`
+- Animated SVG laser paths drawing across hero
+- Scroll parallax on orbs, grid floor, and hero content
+- GSAP infinite marquee strip (hardware-accelerated)
+- **Pinned horizontal scroll** for the Science section (4 panels)
+- ScrollTrigger-driven text-mask reveals on every section heading
+- Process timeline: per-step entrance + dot pop with `back.out`
+- Number counters that tween on enter
+- Animated SVG circle-progress (90% reduction stat)
+- Before/After cards with scrub-driven divider sweep
+- 3D card tilt on hover (pricing, results, hero)
+- FAQ accordion with rotating + → × indicator
+- Smooth GSAP scroll on anchor links
+- Frosted nav on scroll
+- Reduced-motion respected throughout
 
 ## Files
 
-- `index.html` — markup + Tailwind config
-- `styles.css` — keyframes, custom cursor, reveal classes
-- `script.js` — IntersectionObserver, counter, cursor, parallax, form handler
+- `index.html` — markup
+- `styles.css` — full design system, keyframes, layout
+- `script.js` — GSAP timelines, ScrollTrigger setups, magnetic cursor
