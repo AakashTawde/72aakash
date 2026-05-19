@@ -3,7 +3,7 @@
    Inspired by the "Best Body" reference look
    ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Allura&display=swap');
 
 :root {
   /* surfaces — warm cream editorial */
@@ -29,8 +29,8 @@
   --radius: 6px;
   --radius-sm: 4px;
   --maxw: 1140px;
-  --font-head: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-head: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-script: 'Allura', 'Brush Script MT', cursive;
 }
 
@@ -52,12 +52,12 @@ a:hover { opacity: .7; }
 
 h1, h2, h3, h4 {
   font-family: var(--font-head);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--ink);
-  line-height: 1.14;
-  letter-spacing: -.005em;
+  line-height: 1.18;
+  letter-spacing: -.02em;
 }
-h1 em, h2 em, h3 em { font-style: italic; font-weight: 400; }
+h1 em, h2 em, h3 em { font-style: italic; font-weight: 300; }
 
 .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 section { padding: clamp(64px, 8.5vw, 120px) 0; }
