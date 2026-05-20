@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cafe Entry</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Cafe Entry</h1>
+    <div class="header-actions">
+      <button id="printBtn" class="btn btn-primary">Print / Export Excel</button>
+      <button id="clearAllBtn" class="btn btn-danger">Clear All</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2 id="formTitle">New Entry</h2>
+      <form id="entryForm">
+        <input type="hidden" id="entryId" />
+
+        <div class="grid">
+          <div class="field">
+            <label for="name">Name *</label>
+            <input type="text" id="name" required />
+          </div>
+
+          <div class="field">
+            <label for="date">Date *</label>
+            <input type="date" id="date" required />
+          </div>
+
+          <div class="field">
+            <label for="dob">DOB</label>
+            <input type="date" id="dob" />
+          </div>
+
+          <div class="field">
+            <label for="kycDoc">KYC Doc</label>
+            <input type="text" id="kycDoc" placeholder="e.g. Aadhar / PAN" />
+          </div>
+
+          <div class="field">
+            <label for="pcType">PC / PS</label>
+            <select id="pcType">
+              <option value="PC">PC</option>
+              <option value="PS">PS</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="pcNo">PC / PS No.</label>
+            <input type="text" id="pcNo" placeholder="e.g. 5" />
+          </div>
+
+          <div class="field">
+            <label for="inTime">In Time *</label>
+            <input type="time" id="inTime" required />
+          </div>
+
+          <div class="field">
+            <label for="outTime">Out Time *</label>
+            <input type="time" id="outTime" required />
+          </div>
+
+          <div class="field">
+            <label for="hours">Hours (plan)</label>
+            <input type="text" id="hours" placeholder="e.g. 1 HOUR / 2 HOUR" />
+          </div>
+
+          <div class="field">
+            <label for="cash">Cash</label>
+            <input type="number" id="cash" min="0" step="1" />
+          </div>
+
+          <div class="field">
+            <label for="gpay">GPay</label>
+            <input type="number" id="gpay" min="0" step="1" />
+          </div>
+
+          <div class="field">
+            <label for="contact">Contact No.</label>
+            <input type="tel" id="contact" maxlength="15" />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" id="saveBtn">Save Entry</button>
+          <button type="button" class="btn btn-secondary" id="resetBtn">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h2>Entries (<span id="entryCount">0</span>)</h2>
+      <div class="table-wrap">
+        <table id="entriesTable">
+          <thead>
+            <tr>
+              <th>NAME</th>
+              <th>DATE</th>
+              <th>DOB</th>
+              <th>KYC.Doc</th>
+              <th>PC/PS</th>
+              <th>PC/PS no.</th>
+              <th>TIME</th>
+              <th>IN</th>
+              <th>OUT</th>
+              <th>HOURS</th>
+              <th>CASH</th>
+              <th>GPAY</th>
+              <th>CONTACT NO.</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="entriesBody"></tbody>
+        </table>
+      </div>
+      <p id="emptyMsg" class="empty-msg">No entries yet. Add your first entry above.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
