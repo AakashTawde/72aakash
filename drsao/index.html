@@ -1,262 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Prajct Sao | Dermatologist &amp; Hair Transplant Surgeon, Mumbai</title>
-  <meta name="description" content="Dr. Prajct Sao is a Mumbai-based Dermatologist, Trichologist and Hair Transplant Surgeon offering FUE hair transplant, PRP, skin and laser treatments at Cozmaa Clinic." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231f7a52'/><text x='16' y='22' font-size='13' font-family='Arial' font-weight='700' fill='%23ffffff' text-anchor='middle'>PS</text></svg>" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Dr. Prajct Sao — Advanced Hair &amp; Skin Care, Mumbai</title>
+<meta name="description" content="Dr. Prajct Sao is a Mumbai dermatologist and hair transplant surgeon offering FUE, PRP, skin and laser treatments at Cozmaa Clinic." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232d5a3f'/><text x='16' y='22' font-size='13' font-family='Arial' font-weight='700' fill='%23f4e4d4' text-anchor='middle'>S</text></svg>" />
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-  <!-- ===== Header ===== -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-mark">PS</span>
-        <span class="brand-text">
-          <strong>Dr. Prajct Sao</strong>
-          <small>Dermatology &amp; Hair Restoration</small>
-        </span>
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">PS</span><span class="brand-text"><strong>Dr.<span class="accent" style="color:var(--rose-dark);font-style:italic;font-weight:600;"> Sao</span></strong><small>by Cozmaa Clinic, Mumbai</small></span></a>
+    <nav class="site-nav" id="siteNav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="treatments.html">Treatments</a></li>
+        <li><a href="testimonials.html">Patients</a></li>
+        <li><a href="articles.html">Journal</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-cta"><a href="contact.html">Book Appointment <i class="fa-solid fa-arrow-right"></i></a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <span class="header-phone"><i class="fa-solid fa-phone"></i> +91 99999 99999</span>
+      <button class="nav-toggle hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-marquee">Cozmaa · Hair &amp; Skin · Est. 2010</div>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <h1>We Provide Advanced<br /><em>Hair</em> &amp; <span class="underline">Skin</span><br />Treatments</h1>
+      <p>Personalised dermatology and hair restoration crafted with precision, honesty and the latest medical technology &mdash; designed to enhance your natural confidence, safely.</p>
+
+      <div class="hero-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search a treatment or concern..." />
+        <a href="contact.html" class="btn btn-primary" style="padding:13px 24px;">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="hero-stats">
+        <div><h2 data-count="4000" data-suffix="+">4000+</h2><span>Hair Transplants</span></div>
+        <div><h2 data-count="15" data-suffix="+">15+</h2><span>Years Experience</span></div>
+        <div><h2 data-count="20000" data-suffix="+">20000+</h2><span>Patients Treated</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-img-main">
+        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&amp;q=80" alt="Dr. Prajct Sao" />
+      </div>
+      <div class="hero-bubble bubble-1">
+        <div class="ring"><i class="fa-solid fa-user-doctor"></i></div>
+        <div><b>4.8&#9733;</b><span>Patient Rating</span></div>
+      </div>
+      <div class="hero-bubble bubble-2">
+        <div class="ring"><i class="fa-solid fa-heart-pulse"></i></div>
+        <div><b>98%</b><span>Would Recommend</span></div>
+      </div>
+      <div class="hero-quote-card">
+        <p>&ldquo;Our practice blends honest medicine with the latest advances in hair and skin care.&rdquo;</p>
+        <div class="avatars">
+          <div class="avatar-row">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&amp;q=80" alt="" />
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&amp;q=80" alt="" />
+            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=100&amp;q=80" alt="" />
+            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=100&amp;q=80" alt="" />
+          </div>
+          <div class="rating"><i class="fa-solid fa-star"></i> 4.8 / 1.2k reviews</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section about" id="about">
+  <div class="container about-grid">
+    <div class="about-visual">
+      <div class="about-img-1"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&amp;q=80" alt="Cozmaa Clinic interior" /></div>
+      <div class="about-img-2"><img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=700&amp;q=80" alt="Consultation" /></div>
+      <div class="about-badge">
+        <div class="about-badge-inner">
+          <div class="num">15+</div>
+          <div class="lbl">Years</div>
+        </div>
+      </div>
+      <div class="year-badge"><span class="dot"></span><b>EST. 2010</b></div>
+    </div>
+
+    <div class="about-text">
+      <div class="eyebrow">About the Doctor</div>
+      <h2>Redefining Hair &amp; Skin Care Through <em>Precision</em></h2>
+      <p>Dr. Prajct Sao is a Consultant Dermatologist, Trichologist and Hair Transplant Surgeon practising in central Mumbai. MBBS from KEM Hospital, MD &mdash; Dermatology from Grant Medical College &amp; Sir J. J. Hospital. Honest, evidence-based care for every patient.</p>
+
+      <div class="mv-grid">
+        <div class="mv-card">
+          <div class="ico"><i class="fa-solid fa-bullseye"></i></div>
+          <h4>Our Mission</h4>
+          <p>Safe, modern dermatology that restores hair, skin and confidence &mdash; with diagnosis, never guesswork.</p>
+        </div>
+        <div class="mv-card">
+          <div class="ico"><i class="fa-solid fa-eye"></i></div>
+          <h4>Our Vision</h4>
+          <p>A trusted clinic where every patient leaves with a clear plan and natural-looking, lasting results.</p>
+        </div>
+      </div>
+
+      <a href="about.html" class="btn btn-primary">More About Dr. Sao <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Our Treatments</div>
+      <h2>Specialised Hair &amp; Skin <em>Services</em></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&amp;q=80" alt="" /><span class="service-num">01.</span></div>
+        <div class="service-body">
+          <h3>FUE Hair Transplant</h3>
+          <p>Advanced follicular unit extraction for natural, permanent, undetectable results.</p>
+          <a href="treatments.html" class="service-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1612349316228-5942a9b489c2?w=600&amp;q=80" alt="" /><span class="service-num">02.</span></div>
+        <div class="service-body">
+          <h3>PRP Hair Therapy</h3>
+          <p>Platelet-rich plasma to strengthen weak hair and stimulate fresh, healthy growth.</p>
+          <a href="treatments.html" class="service-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&amp;q=80" alt="" /><span class="service-num">03.</span></div>
+        <div class="service-body">
+          <h3>Skin &amp; Acne Care</h3>
+          <p>Root-cause treatment for acne, pigmentation, psoriasis and everyday skin concerns.</p>
+          <a href="treatments.html" class="service-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=600&amp;q=80" alt="" /><span class="service-num">04.</span></div>
+        <div class="service-body">
+          <h3>Laser &amp; Anti-Ageing</h3>
+          <p>Modern laser hair reduction, scar revision and tasteful aesthetic dermatology.</p>
+          <a href="treatments.html" class="service-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="services-cta"><a href="treatments.html" class="btn btn-primary">View All Treatments <i class="fa-solid fa-arrow-right"></i></a></div>
+  </div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section class="section team" id="team">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Meet the Team</div>
+      <h2>Care Led by <em>Specialists</em></h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-img"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&amp;q=80" alt="Dr. Prajct Sao" /></div>
+        <div class="team-info">
+          <span>Consultant Dermatologist</span>
+          <h3>Dr. Prajct Sao</h3>
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-img"><img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=500&amp;q=80" alt="" /></div>
+        <div class="team-info">
+          <span>Clinical Trichologist</span>
+          <h3>Dr. Anjali Mehra</h3>
+          <div class="team-social">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-img"><img src="https://images.unsplash.com/photo-1612531386530-97286d97c2d2?w=500&amp;q=80" alt="" /></div>
+        <div class="team-info">
+          <span>Aesthetic Dermatologist</span>
+          <h3>Dr. Rohan Iyer</h3>
+          <div class="team-social">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-img"><img src="https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?w=500&amp;q=80" alt="" /></div>
+        <div class="team-info">
+          <span>Patient Care Lead</span>
+          <h3>Sister Priya R.</h3>
+          <div class="team-social">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="section process">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">How It Works</div>
+      <h2>Your Path to Better <em>Hair &amp; Skin</em></h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <span class="step-num">Step 1</span>
+        <div class="step-img"><img src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=400&amp;q=80" alt="" /></div>
+        <h3>Consultation</h3>
+        <p>A calm conversation about your concerns and history &mdash; no pressure, no upsell.</p>
+        <div class="process-arrow"><i class="fa-solid fa-arrow-right-long"></i></div>
+      </div>
+      <div class="process-step">
+        <span class="step-num">Step 2</span>
+        <div class="step-img"><img src="https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?w=400&amp;q=80" alt="" /></div>
+        <h3>Diagnosis</h3>
+        <p>Trichoscopy, dermoscopy and the right tests to identify the actual root cause.</p>
+        <div class="process-arrow"><i class="fa-solid fa-arrow-right-long"></i></div>
+      </div>
+      <div class="process-step">
+        <span class="step-num">Step 3</span>
+        <div class="step-img"><img src="https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=400&amp;q=80" alt="" /></div>
+        <h3>Treatment</h3>
+        <p>A personalised plan &mdash; medical, surgical or aesthetic &mdash; tailored to your life.</p>
+        <div class="process-arrow"><i class="fa-solid fa-arrow-right-long"></i></div>
+      </div>
+      <div class="process-step">
+        <span class="step-num">Step 4</span>
+        <div class="step-img"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=400&amp;q=80" alt="" /></div>
+        <h3>Follow-up</h3>
+        <p>Ongoing reviews and aftercare to make sure your results last and life feels easy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section testimonials">
+  <div class="container testi-grid">
+    <div class="testi-visual">
+      <div class="testi-thumb tt-1"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&amp;q=80" alt="" /></div>
+      <div class="testi-thumb tt-2"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&amp;q=80" alt="" /></div>
+      <div class="testi-thumb tt-3"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&amp;q=80" alt="" /></div>
+      <div class="testi-thumb tt-4"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&amp;q=80" alt="" /></div>
+      <div class="testi-thumb tt-5"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&amp;q=80" alt="" /></div>
+      <div class="testi-thumb tt-6"><img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=200&amp;q=80" alt="" /></div>
+      <div class="testi-center"><div><i class="fa-solid fa-quote-right"></i><h3>Patient<br />Stories</h3></div></div>
+    </div>
+
+    <div class="testi-content">
+      <div class="eyebrow">Testimonials</div>
+      <h2 style="margin-bottom:28px;">What Our <em>Patients Say</em></h2>
+      <div class="testi-track">
+        <div class="testi-slides" id="testiSlides">
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="testi-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><b>5.0</b></div>
+              <h3>Natural Results &amp; Honest Care</h3>
+              <p class="quote">&ldquo;I was nervous about a hair transplant, but Dr. Sao explained every step and the results look completely natural six months on. Couldn't be happier.&rdquo;</p>
+              <div class="testi-author"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&amp;q=80" alt="" /><div><h4>Rohit M.</h4><span>FUE Hair Transplant</span></div></div>
+            </div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="testi-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><b>5.0</b></div>
+              <h3>Clear Skin, Finally</h3>
+              <p class="quote">&ldquo;Years of acne, multiple doctors. Dr. Sao identified the actual cause and within months my skin was clear. A genuinely caring doctor.&rdquo;</p>
+              <div class="testi-author"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&amp;q=80" alt="" /><div><h4>Sneha K.</h4><span>Acne Treatment</span></div></div>
+            </div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="testi-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><b>5.0</b></div>
+              <h3>Patient, Professional, Effective</h3>
+              <p class="quote">&ldquo;PRP sessions worked brilliantly for my hair fall. The doctor was patient with every question and the clinic feels calm and well-run.&rdquo;</p>
+              <div class="testi-author"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=120&amp;q=80" alt="" /><div><h4>Amit D.</h4><span>PRP Hair Therapy</span></div></div>
+            </div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="testi-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><b>5.0</b></div>
+              <h3>Honest &amp; Pressure-free</h3>
+              <p class="quote">&ldquo;Years of stubborn pigmentation finally addressed with a clear plan. No pushy upselling &mdash; just real, honest medical advice.&rdquo;</p>
+              <div class="testi-author"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&amp;q=80" alt="" /><div><h4>Priya N.</h4><span>Pigmentation</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-nav">
+        <button id="testiPrev" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
+        <button id="testiNext" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY ===== -->
+<section class="section why">
+  <div class="container">
+    <div class="why-head">
+      <div class="heading-block">
+        <div class="eyebrow">Why Patients Choose Us</div>
+        <h2>What Makes the Practice <em>Different</em></h2>
+      </div>
+      <p>Sound medicine, calm rooms, and the time to actually listen. That is the standard at Cozmaa.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card-img"><img src="https://images.unsplash.com/photo-1612531386530-97286d97c2d2?w=500&amp;q=80" alt="" /></div>
+        <div class="icon"><i class="fa-solid fa-user-doctor"></i></div>
+        <div class="why-card-body">
+          <h3>Expert Guidance</h3>
+          <p>15+ years of dermatology &mdash; tertiary teaching hospital trained.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-card-img"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&amp;q=80" alt="" /></div>
+        <div class="icon"><i class="fa-solid fa-heart"></i></div>
+        <div class="why-card-body">
+          <h3>Personalised Care</h3>
+          <p>No two skins are the same &mdash; no two treatment plans either.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-card-img"><img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=500&amp;q=80" alt="" /></div>
+        <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="why-card-body">
+          <h3>Safe &amp; Modern</h3>
+          <p>Latest, evidence-based techniques in a sterile, accredited clinic.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-card-img"><img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=500&amp;q=80" alt="" /></div>
+        <div class="icon"><i class="fa-solid fa-award"></i></div>
+        <div class="why-card-body">
+          <h3>Natural Results</h3>
+          <p>Tasteful, undetectable outcomes that age well with you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG ===== -->
+<section class="section blog" id="blog">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">From the Journal</div>
+      <h2>Hair &amp; Skin <em>Knowledge</em></h2>
+    </div>
+    <div class="blog-grid">
+      <a class="blog-card" href="article-fue-hair-transplant.html">
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=600&amp;q=80" alt="" /><div class="blog-date"><b>25</b><span>Nov</span></div><span class="blog-tag">Hair</span></div>
+        <div class="blog-body">
+          <div class="blog-meta"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=80&amp;q=80" alt="" /><span>By <strong>Dr. Sao</strong></span></div>
+          <h3>FUE Hair Transplant: What to Expect</h3>
+        </div>
       </a>
-      <nav class="site-nav" id="siteNav">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="treatments.html">Treatments</a></li>
-          <li><a href="testimonials.html">Patients</a></li>
-          <li><a href="articles.html">Journal</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li class="nav-cta"><a href="contact.html">Book</a></li>
+      <a class="blog-card" href="article-hair-fall-causes.html">
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=600&amp;q=80" alt="" /><div class="blog-date"><b>30</b><span>Dec</span></div><span class="blog-tag">Hair</span></div>
+        <div class="blog-body">
+          <div class="blog-meta"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=80&amp;q=80" alt="" /><span>By <strong>Dr. Sao</strong></span></div>
+          <h3>7 Common Causes of Hair Fall</h3>
+        </div>
+      </a>
+      <a class="blog-card" href="article-skin-care-tips.html">
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&amp;q=80" alt="" /><div class="blog-date"><b>08</b><span>Jan</span></div><span class="blog-tag">Skin</span></div>
+        <div class="blog-body">
+          <div class="blog-meta"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=80&amp;q=80" alt="" /><span>By <strong>Dr. Sao</strong></span></div>
+          <h3>A Dermatologist's Daily Skin Routine</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <div class="container cta-inner">
+    <h2>Begin Your Hair &amp; Skin Journey &mdash; Book a <span class="italic">Consultation</span> Today.</h2>
+    <a href="contact.html" class="btn btn-light">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="f-brand"><strong>Dr.<span> Sao</span></strong></a>
+        <p>Consultant Dermatologist, Trichologist &amp; Hair Transplant Surgeon at Cozmaa &mdash; Aesthetic, Hair Transplant &amp; Skin Clinic, Mumbai.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right" style="font-size:9px"></i> About</a></li>
+          <li><a href="treatments.html"><i class="fa-solid fa-chevron-right" style="font-size:9px"></i> Treatments</a></li>
+          <li><a href="testimonials.html"><i class="fa-solid fa-chevron-right" style="font-size:9px"></i> Patients</a></li>
+          <li><a href="articles.html"><i class="fa-solid fa-chevron-right" style="font-size:9px"></i> Journal</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right" style="font-size:9px"></i> Contact</a></li>
         </ul>
-      </nav>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- ===== Hero / Banner ===== -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <div class="hero-wordmark">
-          <h2>DR. PRAJCT SAO</h2>
-          <div class="by-line"><strong>BY</strong> Consultant Dermatologist <em>&middot;</em> Mumbai</div>
-        </div>
-        <h1>Confident <em>skin.</em><br />Fuller <em>hair.</em></h1>
-        <div class="hero-actions">
-          <a href="contact.html" class="btn btn-primary">Book Consultation</a>
-        </div>
-        <div class="hero-features">
-          <div class="hero-feature">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
-            <div>Personalised<span>treatment plans</span></div>
-          </div>
-          <div class="hero-feature">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            <div>Honest &amp; caring<span>medical approach</span></div>
-          </div>
-          <div class="hero-feature">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3 10-10"/></svg>
-            <div>Natural-looking<span>lasting results</span></div>
-          </div>
-        </div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-photo">
-          <span class="initials">PS</span>
-          <span class="photo-caption">Dr. Prajct Sao</span>
-        </div>
+      <div>
+        <h4>Our Clinic</h4>
+        <div class="footer-contact-block"><span>Cozmaa Clinic</span><b>3G Thakkar Industrial Estate,<br />N. M. Joshi Marg, Lower Parel East,<br />Mumbai 400013</b></div>
+        <div class="footer-contact-block"><span>Open</span><b>Mon&ndash;Sun, 10am&ndash;9pm</b></div>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <div class="footer-contact-block"><span>General Enquiries</span><b><a data-email data-fill>info@cozmaa.com</a></b></div>
+        <div class="footer-contact-block"><span>Phone &amp; WhatsApp</span><b><a data-phone data-fill>+91 99999 99999</a></b></div>
       </div>
     </div>
-  </section>
-
-  <!-- ===== Press / Credentials strip ===== -->
-  <section class="press-strip">
-    <div class="container">
-      <span class="press-label">Trained &amp; affiliated with</span>
-      <span class="press-logo">GRANT MEDICAL COLLEGE</span>
-      <span class="press-logo thin">KEM HOSPITAL</span>
-      <span class="press-logo italic">Seth G.S.M.C</span>
-      <span class="press-logo">IADVL</span>
-      <span class="press-logo thin">ISHRS</span>
-      <span class="press-logo italic">AAD</span>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> Dr. Prajct Sao</span>
+      <span>Cozmaa &mdash; Aesthetic, Hair Transplant &amp; Skin Clinic, Mumbai</span>
     </div>
-  </section>
+  </div>
+  <div class="disclaimer">This website is for general awareness only and does not replace professional medical advice. Treatment results vary from person to person. Please consult the doctor for guidance specific to your condition.</div>
+</footer>
 
-  <!-- ===== Loved By Patients (mosaic) ===== -->
-  <section>
-    <div class="container">
-      <div class="brandmark-block">
-        <h3>DR. PRAJCT SAO</h3>
-        <div class="by-line"><em>by</em> Cozmaa Clinic, Mumbai</div>
-      </div>
-      <div class="brandmark-divider"></div>
-      <h2 class="display-h2"><em>Loved</em> By Patients</h2>
-      <p style="text-align:center;color:var(--muted);max-width:560px;margin:0 auto 56px;">A few words from people we've cared for &mdash; and a glimpse of the results that matter most.</p>
+<a class="wa-float" data-wa="Hello, I would like to book a consultation with Dr. Prajct Sao." aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm4.52 11.99c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.48c-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.25 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+</a>
 
-      <div class="mosaic">
-        <div class="mosaic-item m-a tile-photo">
-          <span class="ph-label">Before / After</span>
-          <span class="ph-tag">FUE Transplant &mdash; 8 mo</span>
-        </div>
-        <div class="mosaic-item m-b">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="quote">&ldquo;Six months on, my hair looks completely natural.&rdquo;</p>
-          <span class="who">Rohit M. &mdash; FUE</span>
-        </div>
-        <div class="mosaic-item m-c tile-photo alt">
-          <span class="ph-label">Patient Story</span>
-          <span class="ph-tag">Acne &mdash; 12 weeks</span>
-        </div>
-        <div class="mosaic-item m-d">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="quote">&ldquo;Genuinely caring doctor &mdash; my skin finally cleared.&rdquo;</p>
-          <span class="who">Sneha K. &mdash; Acne</span>
-        </div>
-        <div class="mosaic-item m-e tile-photo">
-          <span class="ph-label">PRP Therapy</span>
-          <span class="ph-tag">3 sessions</span>
-        </div>
-        <div class="mosaic-item m-f">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="quote">&ldquo;Patient with every question, gentle in every step. PRP sessions worked beautifully for my hair fall.&rdquo;</p>
-          <span class="who">Amit D. &mdash; PRP</span>
-        </div>
-        <div class="mosaic-item m-g tile-photo dark">
-          <span class="ph-label">&ldquo;A practice rooted in trust.&rdquo;</span>
-          <span class="ph-tag">Cozmaa &mdash; Mumbai</span>
-        </div>
-        <div class="mosaic-item m-h">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="quote">&ldquo;Pigmentation that bothered me for years &mdash; finally a real plan.&rdquo;</p>
-          <span class="who">Priya R. &mdash; Pigmentation</span>
-        </div>
-      </div>
-
-      <div style="text-align:center;margin-top:48px;">
-        <a href="testimonials.html" class="btn btn-ghost">Read more stories</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Behind The Practice (about split 1) ===== -->
-  <section class="section-soft">
-    <div class="container split">
-      <div class="split-photo"><span class="initials">PS</span></div>
-      <div class="split-copy">
-        <h2><em>Behind</em> the practice</h2>
-        <p>When I say I understand what you are going through, I mean it. Hair loss, stubborn acne, pigmentation, the small skin worries that quietly chip away at confidence &mdash; I have heard them all, and I have seen them all turn around.</p>
-        <p>My promise is honest medical advice, careful diagnosis and treatments that fit your life &mdash; not a one-size-fits-all menu.</p>
-        <div class="signature">Dr. Prajct Sao</div>
-        <div class="signature-tag">MBBS, MD &mdash; Dermatology</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== A Simple Program (split 2 — reverse) ===== -->
-  <section>
-    <div class="container split reverse">
-      <div class="split-photo tone-2"><span class="initials">PS</span></div>
-      <div class="split-copy">
-        <span class="small-intro">The Approach</span>
-        <h2>A simple practice to help you finally feel like yourself again.</h2>
-        <p>Does this sound familiar? You know something needs to change, you have tried products and quick fixes, but progress feels out of reach. Most skin and hair concerns are not complicated &mdash; they just need the right plan and someone who actually listens.</p>
-        <p>That is what I built my practice around: clear consultations, evidence-based treatments, and the time to do them properly &mdash; from FUE hair transplant and PRP to acne, pigmentation and laser care.</p>
-        <a href="treatments.html" class="btn btn-primary" style="margin-top:14px;">Explore treatments</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Hello, I'm Dr. Sao (split 3) ===== -->
-  <section class="section-soft">
-    <div class="container split">
-      <div class="split-photo tone-3"><span class="initials">PS</span></div>
-      <div class="split-copy">
-        <h2>Hello, I'm <em>Dr. Sao.</em></h2>
-        <p>For more than fifteen years I have practised dermatology in Mumbai &mdash; from KEM Hospital and Grant Medical College, to leading my own clinic at Cozmaa. Along the way I have helped thousands of patients with hair restoration, complex skin conditions and the everyday concerns that matter to them.</p>
-        <p>If you are considering a hair transplant or want a calmer, clearer conversation about your skin, I would be glad to meet you.</p>
-        <a href="about.html" class="btn btn-ghost" style="margin-top:8px;">More about me</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CTA ===== -->
-  <section class="cta-band">
-    <div class="container">
-      <span class="eyebrow">Ready when you are</span>
-      <h2>Book your <em>consultation</em> today</h2>
-      <p>Send a short enquiry and the clinic team will get back to you with available times.</p>
-      <div class="cta-actions">
-        <a href="contact.html" class="btn btn-gold">Send an enquiry</a>
-        <a class="btn btn-outline-light" data-wa="Hello, I would like to book a consultation with Dr. Prajct Sao.">Chat on WhatsApp</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Footer ===== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="f-brand">
-            <span class="brand-mark">PS</span>
-            <strong>Dr. Prajct Sao</strong>
-          </div>
-          <p>Consultant Dermatologist, Trichologist &amp; Hair Transplant Surgeon at Cozmaa &mdash; Aesthetic, Hair Transplant &amp; Skin Clinic, Mumbai.</p>
-        </div>
-        <div>
-          <h4>Explore</h4>
-          <ul class="footer-links">
-            <li><a href="about.html">About</a></li>
-            <li><a href="treatments.html">Treatments</a></li>
-            <li><a href="testimonials.html">Patients</a></li>
-            <li><a href="articles.html">Journal</a></li>
-            <li><a href="contact.html">Book a consultation</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Treatments</h4>
-          <ul class="footer-links">
-            <li><a href="treatments.html">Hair Transplant (FUE)</a></li>
-            <li><a href="treatments.html">PRP Hair Therapy</a></li>
-            <li><a href="treatments.html">Skin &amp; Acne Care</a></li>
-            <li><a href="treatments.html">Laser Treatments</a></li>
-            <li><a href="treatments.html">Anti-Ageing</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Get in touch</h4>
-          <div class="info-line">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Cozmaa Clinic, 3G Thakkar Industrial Estate, N. M. Joshi Marg, Lower Parel East, Mumbai 400013</span>
-          </div>
-          <div class="info-line">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-            <a data-phone data-fill>+91 99999 99999</a>
-          </div>
-          <div class="info-line">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-            <a data-email data-fill>info@cozmaa.com</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; <span data-year></span> Dr. Prajct Sao</span>
-        <span>Cozmaa &mdash; Aesthetic, Hair Transplant &amp; Skin Clinic, Mumbai</span>
-      </div>
-    </div>
-    <div class="disclaimer">
-      This website is for general awareness only and does not replace professional medical advice. Treatment results vary from person to person. Please consult the doctor for guidance specific to your condition.
-    </div>
-  </footer>
-
-  <a class="wa-float" data-wa="Hello, I would like to book a consultation with Dr. Prajct Sao." aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.23 8.25c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.48c-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.25 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
-  </a>
-
-  <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
