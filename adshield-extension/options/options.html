@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="options.css" />
+    <title>AdShield — Settings</title>
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>AdShield Settings</h1>
+      <p class="lede">
+        AdShield runs entirely in your browser. These settings only change what
+        <em>you</em> see — nothing is sent to any website or server.
+      </p>
+
+      <section class="card">
+        <h2>General</h2>
+        <label class="check">
+          <input type="checkbox" id="enabled" />
+          <span>Enable ad &amp; pop-up blocking</span>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="hideAntiAdblock" />
+          <span>Dismiss "please disable your ad blocker" walls</span>
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>Leftover ad space</h2>
+        <p class="muted">
+          Choose what happens to the empty box a blocked ad leaves behind.
+        </p>
+        <label class="check">
+          <input type="checkbox" id="ph-enabled" />
+          <span>Tidy up leftover ad space</span>
+        </label>
+
+        <fieldset id="ph-options" class="indent">
+          <label class="radio">
+            <input type="radio" name="ph-mode" value="collapse" />
+            <span>Collapse the gap (recommended)</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="ph-mode" value="custom" />
+            <span>Show my own placeholder (this browser only)</span>
+          </label>
+
+          <div id="custom-fields" class="custom-fields">
+            <label class="field">
+              <span>Placeholder text</span>
+              <input type="text" id="ph-label" maxlength="120" placeholder="e.g. Ad removed" />
+            </label>
+            <label class="field">
+              <span>Image URL (optional, https only)</span>
+              <input type="url" id="ph-image" placeholder="https://example.com/image.png" />
+            </label>
+            <div class="preview-wrap">
+              <span class="muted">Preview</span>
+              <div id="preview" class="adshield-placeholder">
+                <span class="adshield-placeholder__label">Ad removed</span>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="card">
+        <h2>Allowed sites</h2>
+        <p class="muted">Ads are left untouched on these domains.</p>
+        <div class="add-row">
+          <input type="text" id="wl-input" placeholder="example.com" />
+          <button id="wl-add" type="button">Add</button>
+        </div>
+        <ul id="wl-list" class="wl-list"></ul>
+      </section>
+
+      <p id="saved" class="saved" hidden>Saved</p>
+    </main>
+
+    <link rel="stylesheet" href="../content/placeholder.css" />
+    <script src="options.js"></script>
+  </body>
+</html>

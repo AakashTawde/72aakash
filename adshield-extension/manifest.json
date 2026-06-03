@@ -1,0 +1,67 @@
+{
+  "manifest_version": 3,
+  "name": "AdShield — Ad & Pop-up Blocker",
+  "version": "1.0.0",
+  "description": "Blocks ads and pop-ups, dismisses anti-adblock walls, and tidies up leftover ad space. Runs entirely on your own machine.",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "storage",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "AdShield",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options/options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "content/filter-data.js",
+        "content/settings-bridge.js",
+        "content/cosmetic.js",
+        "content/anti-adblock.js",
+        "content/placeholder.js"
+      ],
+      "css": ["content/placeholder.css"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "adshield_network_rules",
+        "enabled": true,
+        "path": "rules/network-rules.json"
+      }
+    ]
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content/placeholder.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

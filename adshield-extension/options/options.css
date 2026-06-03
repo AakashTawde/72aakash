@@ -1,0 +1,104 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #1c2230;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.wrap { max-width: 640px; margin: 0 auto; padding: 32px 20px 60px; }
+
+h1 { font-size: 24px; margin: 0 0 4px; }
+.lede { color: #4b5563; margin: 0 0 24px; font-size: 14px; }
+.lede em { font-style: italic; }
+
+.card {
+  background: #fff;
+  border: 1px solid #e6e9ed;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+.card h2 { font-size: 16px; margin: 0 0 12px; }
+
+.muted { color: #6b7280; font-size: 13px; margin: 0 0 12px; }
+
+.check, .radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+.check input, .radio input { width: 16px; height: 16px; }
+
+.indent { border: none; margin: 8px 0 0; padding: 0 0 0 8px; }
+fieldset.indent[disabled] { opacity: 0.5; }
+
+.custom-fields { margin-top: 10px; padding-left: 26px; }
+.custom-fields.hidden { display: none; }
+
+.field { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; }
+.field span { font-size: 13px; color: #4b5563; }
+.field input {
+  padding: 8px 10px;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.preview-wrap { margin-top: 8px; }
+.preview-wrap > .muted { display: block; margin-bottom: 6px; }
+#preview { width: 300px; max-width: 100%; height: 90px; }
+
+.add-row { display: flex; gap: 8px; margin-bottom: 12px; }
+.add-row input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.add-row button, #wl-add {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2f7d4f;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.wl-list { list-style: none; margin: 0; padding: 0; }
+.wl-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border: 1px solid #eef0f3;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+.wl-list button {
+  background: none;
+  border: none;
+  color: #c0392b;
+  cursor: pointer;
+  font-size: 13px;
+}
+.wl-empty { color: #9aa0a6; font-size: 13px; }
+
+.saved {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1c2230;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+}

@@ -1,0 +1,36 @@
+/*
+ * placeholder.css
+ *
+ * Styling for the optional, user-defined placeholder rendered where ads were
+ * removed. Intentionally neutral so it never mimics a real advertisement.
+ */
+.adshield-placeholder {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  min-height: 24px !important;
+  padding: 8px !important;
+  border: 1px dashed rgba(120, 120, 120, 0.35) !important;
+  border-radius: 6px !important;
+  background: rgba(127, 127, 127, 0.06) !important;
+  color: rgba(110, 110, 110, 0.85) !important;
+  font: 12px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif !important;
+  text-align: center !important;
+  overflow: hidden !important;
+}
+
+.adshield-placeholder__img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  border-radius: 4px !important;
+}
+
+.adshield-placeholder__label {
+  opacity: 0.8 !important;
+  letter-spacing: 0.02em !important;
+}

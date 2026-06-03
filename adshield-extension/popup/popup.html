@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>AdShield</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="../icons/icon48.png" alt="" class="logo" />
+      <div class="title">
+        <h1>AdShield</h1>
+        <p id="host" class="host">—</p>
+      </div>
+    </header>
+
+    <section class="stats">
+      <span id="count" class="count">0</span>
+      <span class="count-label">items blocked on this page</span>
+    </section>
+
+    <section class="controls">
+      <label class="row">
+        <span class="row-label">Protection</span>
+        <span class="switch">
+          <input type="checkbox" id="enabled" />
+          <span class="slider"></span>
+        </span>
+      </label>
+
+      <label class="row">
+        <span class="row-label">Allow ads on this site</span>
+        <span class="switch">
+          <input type="checkbox" id="whitelist" />
+          <span class="slider"></span>
+        </span>
+      </label>
+    </section>
+
+    <footer class="footer">
+      <button id="options" class="link-btn" type="button">Settings &amp; placeholders</button>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
