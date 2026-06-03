@@ -5,6 +5,9 @@ news, official match schedules, live streams, and real-time live scores.
 
 > Last reviewed: June 2026. Links point to the home/landing pages of each
 > service — exact URLs occasionally change, so the domain is the source of truth.
+>
+> 🌐 **Browsable version:** open [`index.html`](./index.html) in a browser for a
+> styled, themed version of this guide.
 
 ---
 

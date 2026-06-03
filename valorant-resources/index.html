@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Valorant Resources Hub</title>
+<style>
+  :root {
+    --bg: #0f1923;
+    --panel: #1b2733;
+    --panel-2: #22303c;
+    --red: #ff4655;
+    --red-dim: #ff465533;
+    --text: #ece8e1;
+    --muted: #8b9bab;
+    --border: #2c3a47;
+    --link: #ff8a93;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header {
+    background: linear-gradient(135deg, #0f1923 0%, #1b2733 100%);
+    border-bottom: 3px solid var(--red);
+    padding: 48px 24px 36px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  header h1 span { color: var(--red); }
+  header p { color: var(--muted); margin: 10px 0 0; }
+  .updated { font-size: 0.8rem; color: var(--muted); margin-top: 6px; }
+
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 24px; }
+
+  nav.toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 28px 0 8px;
+  }
+  nav.toc a {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    border-radius: 999px;
+    color: var(--text);
+    font-size: 0.9rem;
+    transition: all 0.15s ease;
+  }
+  nav.toc a:hover {
+    background: var(--red);
+    border-color: var(--red);
+    text-decoration: none;
+  }
+
+  section {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--red);
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 26px 0;
+  }
+  section h2 {
+    margin: 0 0 4px;
+    font-size: 1.35rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  section .num {
+    background: var(--red);
+    color: #fff;
+    width: 28px; height: 28px;
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+  section .sub { color: var(--muted); margin: 0 0 16px; font-size: 0.92rem; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.93rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    color: var(--red);
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+  }
+  tr:hover td { background: var(--panel-2); }
+  td.site { font-weight: 600; white-space: nowrap; }
+  .tag {
+    display: inline-block;
+    background: var(--red-dim);
+    color: var(--link);
+    border: 1px solid var(--red);
+    font-size: 0.68rem;
+    padding: 1px 7px;
+    border-radius: 4px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  .tip {
+    background: var(--panel-2);
+    border-left: 3px solid var(--red);
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-top: 16px;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+
+  .picks { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .pick {
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .pick h3 { margin: 0 0 6px; font-size: 0.95rem; color: var(--red); }
+  .pick p { margin: 0; font-size: 0.88rem; color: var(--muted); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <h1>VALO<span>RANT</span> Resources Hub</h1>
+  <p>Blogs &amp; news &bull; official schedules &bull; live streams &bull; real-time scores</p>
+  <div class="updated">Last reviewed: June 2026</div>
+</header>
+
+<div class="wrap">
+  <nav class="toc">
+    <a href="#blogs">1 &middot; Blogs &amp; News</a>
+    <a href="#schedules">2 &middot; Schedules</a>
+    <a href="#streams">3 &middot; Live Streams</a>
+    <a href="#scores">4 &middot; Live Scores</a>
+    <a href="#picks">Quick Picks</a>
+  </nav>
+
+  <!-- 1. BLOGS -->
+  <section id="blogs">
+    <h2><span class="num">1</span> Blogs &amp; Regular News Coverage</h2>
+    <p class="sub">Ongoing articles, patch breakdowns, agent/meta guides, roster news, and esports features.</p>
+    <table>
+      <thead><tr><th>Site</th><th>What it's good for</th></tr></thead>
+      <tbody>
+        <tr><td class="site"><a href="https://playvalorant.com/en-us/news/">PlayValorant <span class="tag">Official</span></a></td><td>Patch notes, dev updates, agent/map releases straight from Riot</td></tr>
+        <tr><td class="site"><a href="https://valorantesports.com/en-US/news">VALORANT Esports News <span class="tag">Official</span></a></td><td>Official competitive/esports announcements</td></tr>
+        <tr><td class="site"><a href="https://www.vlr.gg/news">VLR.gg — News</a></td><td>Community-driven esports news, transfers, event recaps</td></tr>
+        <tr><td class="site"><a href="https://www.thespike.gg/">THESPIKE.GG</a></td><td>Esports news, event coverage, team rankings</td></tr>
+        <tr><td class="site"><a href="https://www.esports.net/news/valorant/">Esports.net — Valorant</a></td><td>News, analysis, predictions</td></tr>
+        <tr><td class="site"><a href="https://www.ggrecon.com/valorant/">GGRecon</a></td><td>Features, interviews, guides</td></tr>
+        <tr><td class="site"><a href="https://mobalytics.gg/valorant">Mobalytics</a></td><td>Agent/gun/map guides and meta breakdowns</td></tr>
+        <tr><td class="site"><a href="https://egamersworld.com/valorant/blog">EGamersWorld — Blog</a></td><td>News and blog content</td></tr>
+        <tr><td class="site"><a href="https://dotesports.com/valorant">Dot Esports</a></td><td>High-volume news and guides</td></tr>
+        <tr><td class="site"><a href="https://www.dexerto.com/valorant/">Dexerto</a></td><td>News, leaks, creator/community stories</td></tr>
+        <tr><td class="site"><a href="https://bloggers.feedspot.com/valorant_blogs/">Feedspot — Top Blogs</a></td><td>Aggregated directory of more blogs to follow</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 2. SCHEDULES -->
+  <section id="schedules">
+    <h2><span class="num">2</span> Official Match Schedules</h2>
+    <p class="sub">Authoritative sources for upcoming VCT matches, dates, and the competitive calendar.</p>
+    <table>
+      <thead><tr><th>Source</th><th>What it covers</th></tr></thead>
+      <tbody>
+        <tr><td class="site"><a href="https://valorantesports.com/en-US/">VALORANT Esports <span class="tag">Official</span></a></td><td>Official schedule for VCT International Leagues, Masters, Champions</td></tr>
+        <tr><td class="site"><a href="https://www.vlr.gg/matches">VLR.gg — Matches</a></td><td>Full upcoming match list across all regions/tiers</td></tr>
+        <tr><td class="site"><a href="https://escharts.com/news/2026-valorant-esports-schedule">Esports Charts — Calendar</a></td><td>Season-wide calendar of leagues, LANs, milestones</td></tr>
+        <tr><td class="site"><a href="https://liquipedia.net/valorant">Liquipedia</a></td><td>Community wiki with brackets, schedules, prize pools</td></tr>
+        <tr><td class="site"><a href="https://www.rib.gg/">RIB.GG</a></td><td>Schedules tied to deep stats/analytics</td></tr>
+        <tr><td class="site"><a href="https://www.strafe.com/calendar/valorant/">Strafe — Calendar</a></td><td>Cross-region match calendar</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 3. STREAMS -->
+  <section id="streams">
+    <h2><span class="num">3</span> Live Match Streams</h2>
+    <p class="sub">Where to watch matches live — official broadcasts and aggregators.</p>
+    <table>
+      <thead><tr><th>Platform</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="site"><a href="https://valorantesports.com/en-US/watch">Esports Watch Hub <span class="tag">Official</span></a></td><td>Official multistream hub; co-streams &amp; languages</td></tr>
+        <tr><td class="site"><a href="https://www.twitch.tv/valorant">Twitch — VALORANT</a></td><td>Official channels + co-streamers</td></tr>
+        <tr><td class="site"><a href="https://www.youtube.com/@valorantesports">YouTube — VALORANT Esports</a></td><td>Official VOD + live broadcasts</td></tr>
+        <tr><td class="site"><a href="https://www.twitch.tv/riotgames">Twitch — Riot Games <span class="tag">Drops</span></a></td><td>Drops-enabled official broadcasts</td></tr>
+        <tr><td class="site"><a href="https://www.vlr.gg/">VLR.gg (event pages)</a></td><td>Each event page links the active stream(s)</td></tr>
+        <tr><td class="site"><a href="https://www.strafe.com/calendar/valorant/">Strafe</a></td><td>Shows live stream links alongside the schedule</td></tr>
+      </tbody>
+    </table>
+    <div class="tip">💡 Official streams (valorantesports.com / Twitch / YouTube) are where in-game <strong>Drops</strong> are earned. Aggregators just redirect to these sources.</div>
+  </section>
+
+  <!-- 4. SCORES -->
+  <section id="scores">
+    <h2><span class="num">4</span> Real-Time Live Scores</h2>
+    <p class="sub">Trackers for in-progress matches, round-by-round scores, and instant results.</p>
+    <table>
+      <thead><tr><th>Site</th><th>Strength</th></tr></thead>
+      <tbody>
+        <tr><td class="site"><a href="https://www.vlr.gg/">VLR.gg</a></td><td>The community standard — live scores, results, stats, rankings</td></tr>
+        <tr><td class="site"><a href="https://bo3.gg/valorant/matches/current">Bo3.gg</a></td><td>All current matches in one place, filterable by team/tournament</td></tr>
+        <tr><td class="site"><a href="https://www.rib.gg/">RIB.GG</a></td><td>Live scores plus the deepest stats/analytics layer</td></tr>
+        <tr><td class="site"><a href="https://www.strafe.com/calendar/valorant/">Strafe</a></td><td>Real-time live scores + results</td></tr>
+        <tr><td class="site"><a href="https://egamersworld.com/valorant/matches">EGamersWorld</a></td><td>Live stats and match tracking</td></tr>
+        <tr><td class="site"><a href="https://www.thespike.gg/">THESPIKE.GG</a></td><td>Live results with rankings context</td></tr>
+        <tr><td class="site"><a href="https://liquipedia.net/valorant">Liquipedia</a></td><td>Live brackets updated as matches finish</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- PICKS -->
+  <section id="picks">
+    <h2><span class="num">★</span> Quick Picks</h2>
+    <div class="picks">
+      <div class="pick"><h3>All-in-one</h3><p><a href="https://www.vlr.gg/">VLR.gg</a> — schedule, live scores, news, and stats in one place.</p></div>
+      <div class="pick"><h3>Official &amp; authoritative</h3><p><a href="https://valorantesports.com/en-US/">valorantesports.com</a> for schedule + streams (and Drops).</p></div>
+      <div class="pick"><h3>Deepest stats</h3><p><a href="https://www.rib.gg/">RIB.GG</a> for analytics-grade data.</p></div>
+      <div class="pick"><h3>Best calendar overview</h3><p><a href="https://escharts.com/">Esports Charts</a> &amp; <a href="https://liquipedia.net/valorant">Liquipedia</a>.</p></div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  Curated June 2026 &bull; Links point to home/landing pages — domains are the source of truth.<br />
+  Not affiliated with Riot Games. VALORANT is a trademark of Riot Games, Inc.
+</footer>
+</body>
+</html>
