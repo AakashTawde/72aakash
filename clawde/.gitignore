@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+.env.local
+*.log
+# Local runtime state (config + WhatsApp session live in ~/.clawde by default,
+# but ignore a project-local one too if you set CLAWDE_HOME=./.clawde).
+.clawde/
